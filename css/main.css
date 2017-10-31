@@ -1,0 +1,18 @@
+.addbutton {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+a {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
