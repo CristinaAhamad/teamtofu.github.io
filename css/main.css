@@ -3,16 +3,24 @@
     border: none;
     color: white;
     text-align: center;
+    vertical-align: middle;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 32px;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 a {
     color: black;
     background-color: transparent;
     text-decoration: none;
+}
+
+html *
+{
+   font-family: Raleway !important;
+   text-align: center;
+   vertical-align: middle;
 }
