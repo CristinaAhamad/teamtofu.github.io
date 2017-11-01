@@ -1,4 +1,4 @@
-html:not(.back)
+html *
 {
    font-family: Raleway !important;
    text-align: center;
