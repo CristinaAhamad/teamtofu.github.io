@@ -1,3 +1,10 @@
+html:not(.back)
+{
+   font-family: Raleway !important;
+   text-align: center;
+   vertical-align: middle;
+}
+
 .addbutton {
     background-color: #008CBA;
     border: none;
@@ -18,9 +25,14 @@ a {
     text-decoration: none;
 }
 
-html *
-{
-   font-family: Raleway !important;
-   text-align: center;
-   vertical-align: middle;
+.back{
+  float: left;
+  background-color: inherit;
+  border: none;
+  color: black;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 25px;
+  height: 30px;
+  width: 30px;
 }
