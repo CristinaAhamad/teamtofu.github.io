@@ -12,20 +12,20 @@
         <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
       </form>
       <h1> New Profile </h1></br>
-      <form id="profile" action="" method="post">
+      <form id="profile-form" action="" method="get" onsubmit="getFormInfo(); return false">
         <fieldset>
           <legend>General</legend>
-        <input type="text" name="firstname" placeholder="First Name"/></input> </br>
-        <input type="text" name="lastname" placeholder="Last Name"/></input> </br>
-        <select name="Sex">
+        <input type="text" id="firstname" placeholder="First Name" required></input> </br>
+        <input type="text" id="lastname" placeholder="Last Name"></input> </br>
+        <select id="sex" name="Sex">
             <option "" disabled selected hidden>Enter Sex</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Decline to State">Decline to State</option>
         </select> </br>
-        <input type="number" name="weight" min="1" max="500"> lbs.</input> </br>
-        <input type="number" name="height-ft" min="0" max="8"> ft.
-        <input type="number" name="height-in" min="0" max="11"> in.
+        <input type="number" id="weight" min="1" max="500"> lbs.</input> </br>
+        <input type="number" id="height-ft" min="0" max="8"> ft.
+        <input type="number" id="height-in" min="0" max="11"> in.
       </input></br>
       </fieldset>
     </br>
@@ -56,10 +56,10 @@
         </div> </br>
 
         <div> Add Profile Photo (optional): </div>
-        <input type="file" name="photo"> </br> </br>
+        <input type="file" id="prof-photo"> </br> </br>
 
-        <input type="submit" id="profile-submit" class="addbutton" value=&#10004
-          onclick="window.location.href='http://cristinaahamad.github.io/teamtofu/profiles-page.html'">
+        <input type="submit" id="submit" class="addbutton" value=&#10004
+          onclick="getFormInfo();window.location.href='http://cristinaahamad.github.io/teamtofu/profiles-page.html'">
         <a href="http://cristinaahamad.github.io/teamtofu/profiles-page.html" size="4">  Submit</a></input></br>
       </form>
     </body>
