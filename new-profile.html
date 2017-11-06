@@ -11,8 +11,26 @@
       </form>
       <h1> New Profile </h1></br>
       <form>
-        <input type="text" value="First Name"/> </br>
-        <input type="text" value="Last Name"/> </br>
+        <input type="text" placeholder="First Name"/></input> </br>
+        <input type="text" placeholder="Last Name"/></input> </br>
+        <select name="Sex">
+            <option placeholder="Enter Sex"></option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Decline to State">Decline to State</option>
+        </select> </br>
+        <input type="number" name="weight" min="1" max="500">Weight (lbs.)</input> </br>
+        <input type="number" name="height-ft" min="0" max="8">ft.
+        <input type="number" name="height-in" min="0" max="11">in.
+      </input></br>
+
+        <h2> Preferences </h2>
+
+        Allergies:
+        <div class="input_fields_wrap">
+          <button class="add_field_button">Add Another</button>
+          <div><input type="text" name="mytext[]"></div>
+        </div>
       </form>
       <a href="http://cristinaahamad.github.io/teamtofu/profiles-page.html">Accept</a></br>
     </body>
