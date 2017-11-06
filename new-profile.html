@@ -13,20 +13,24 @@
       </form>
       <h1> New Profile </h1></br>
       <form id="profile" action="" method="post">
-        <input type="text" placeholder="First Name"/></input> </br>
-        <input type="text" placeholder="Last Name"/></input> </br>
+        <fieldset>
+          <legend>General</legend>
+        <input type="text" name="firstname" placeholder="First Name"/></input> </br>
+        <input type="text" name="lastname" placeholder="Last Name"/></input> </br>
         <select name="Sex">
             <option "" disabled selected hidden>Enter Sex</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
             <option value="Decline to State">Decline to State</option>
         </select> </br>
-        <input type="number" name="weight" min="1" max="500">Weight (lbs.)</input> </br>
-        <input type="number" name="height-ft" min="0" max="8">ft.
-        <input type="number" name="height-in" min="0" max="11">in.
+        <input type="number" name="weight" min="1" max="500"> lbs.</input> </br>
+        <input type="number" name="height-ft" min="0" max="8"> ft.
+        <input type="number" name="height-in" min="0" max="11"> in.
       </input></br>
-
-        <h2> Preferences </h2>
+      </fieldset>
+    </br>
+      <fieldset>
+        <legend>Preferences </legend>
         <div class="input_fields_wrap">
           Allergies:
           <div><input type="text" name="mytext[]"></div>
@@ -50,9 +54,13 @@
           <div><input type="text" name="mytext[]"></div>
           <button class="add_field_button">Add Another</button>
         </div> </br>
+
+        <div> Add Profile Photo (optional): </div>
+        <input type="file" name="photo"> </br> </br>
+
+        <input type="submit" id="profile-submit" class="addbutton" value=&#10004
+          onclick="window.location.href='http://cristinaahamad.github.io/teamtofu/profiles-page.html'">
+        <a href="http://cristinaahamad.github.io/teamtofu/profiles-page.html" size="4">  Submit</a></input></br>
       </form>
-      <input type="submit" id="profile-submit" class="addbutton" value=&#10004
-        onclick="window.location.href='http://cristinaahamad.github.io/teamtofu/profiles-page.html'">
-      <a href="http://cristinaahamad.github.io/teamtofu/profiles-page.html" size="4">  Submit</a></input></br>
     </body>
   </html>
