@@ -7,6 +7,7 @@ function getFormInfo() {
   var entry = [];
   entry.push($("#firstname").val());
   entry.push($("#lastname").val());
+  entry.push($("#age").val());
   entry.push($("#sex").val());
   entry.push($("#weight").val());
   entry.push($("#height-ft").val());
@@ -37,4 +38,8 @@ function showInfo() {
       //arrayOfProfiles[0] should be the first one
       document.getElementById('display-profile').innerHTML = storedProfiles[0];
     }
+};
+
+function addToProfilePage(var profName) {
+  //dynamically add profile photo and name to profiles page
 }
