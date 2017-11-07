@@ -25,17 +25,11 @@ function getFormInfo() {
       //var health;
       //var dislikes;
       //var likes;
-  console.log(entry);
-  console.log(arrayOfProfiles);
+  localStorage.length = localStorage.length + 1;
+  console.log(localStorage.length);
   arrayOfProfiles.push(entry);
+  console.log(arrayOfProfiles);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
-
-  //for (var key in entry) {
-    //var person = JSON.parse(entry[key]);
-    //var div = document.getElementById('profiles-list').lastChild;
-    //div.innerHTML = div.innerHTML + "<div class='entry'><ul class='no-list-style'><li><h3>"+person.firstname+" "+person.lastname+"</h3>
-    //</li><li>"+person.sex+"</li><li>"+person.lbs+"</li><li>"+person.ft+"</li><li>"+person.inch+"</li></ul></div>";
-  //}
 };
 
 function showInfo() {
