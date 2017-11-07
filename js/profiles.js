@@ -2,6 +2,7 @@
 
 function getFormInfo() {
   //if there isn't an array yet, make one
+  console.log(localStorage.length);
   if (localStorage.length == 0) {
     var arrayOfProfiles = [];
   }
