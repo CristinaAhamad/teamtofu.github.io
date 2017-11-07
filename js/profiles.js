@@ -20,20 +20,20 @@ function getFormInfo() {
 
   //Create individual arrays to save Preferences
   var allergies = [];
-     allergies.push($("#allergies").val());
+     allergies.push($(".allergies").val());
   entry.push(allergies);
   console.log(allergies);
 
   var health = [];
-      health.push($("#health").val());
+      health.push($(".health").val());
   entry.push(health);
 
   var dislikes = [];
-      dislikes.push($("#dislikes").val());
+      dislikes.push($(".dislikes").val());
   entry.push(dislikes);
 
   var likes =[];
-      likes.push($("#likes").val());
+      likes.push($(".likes").val());
   entry.push(likes);
 
   localStorage.length = arrayOfProfiles.length;
@@ -41,6 +41,7 @@ function getFormInfo() {
   arrayOfProfiles.push(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
 };
+
 
 function showInfo() {
   //window.onload = function() {
@@ -52,6 +53,7 @@ function showInfo() {
     }
     $("#firstname").text("name");
 };
+
 
 function addToProfilePage(profName) {
   //dynamically add profile photo and name to profiles page
