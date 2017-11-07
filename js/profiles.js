@@ -5,12 +5,12 @@ function getFormInfo() {
   }
     //creates new profile entry
     var entry = [];
-    entry.push(document.getElementById('firstname').value);
-    entry.push(document.getElementById('lastname').value);
-    entry.push(document.getElementById('sex').value);
-    entry.push(document.getElementById('weight').value);
-    entry.push(document.getElementById('height-ft').value);
-    entry.push(document.getElementById('height-in').value);
+    entry.push($("#firstname").val());
+    entry.push($("#lastname").val());
+    entry.push($("#sex").val());
+    entry.push($("#weight").val());
+    entry.push($("#height-ft").val());
+    entry.push($("#height-in").val());
 
       //Create individual arrays to save Preferences
       //var allergies;
