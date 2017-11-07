@@ -37,4 +37,4 @@ function showInfo() {
       //arrayOfProfiles[0] should be the first one
       document.getElementById('display-profile').innerHTML;
     }
-}
+};
