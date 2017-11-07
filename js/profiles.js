@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 function getFormInfo() {
   //if there isn't an array yet, make one
   if (localStorage.length == 0) {
@@ -18,10 +20,11 @@ function getFormInfo() {
       //var health;
       //var dislikes;
       //var likes;
-
-  //arrayOfProfiles = localStorage.getItem("profiles-list");
+  console.log(entry);
+  console.log(arrayOfProfiles);
   arrayOfProfiles.push(entry);
   localStorage.setItem('profiles-list', JSON.stringify(arrayOfProfiles));
+
   //for (var key in entry) {
     //var person = JSON.parse(entry[key]);
     //var div = document.getElementById('profiles-list').lastChild;
@@ -38,6 +41,7 @@ function showInfo() {
       //arrayOfProfiles[0] should be the first one
       document.getElementById('display-profile').innerHTML = storedProfiles[0];
     }
+    $("#firstname").text("name");
 };
 
 function addToProfilePage(profName) {
