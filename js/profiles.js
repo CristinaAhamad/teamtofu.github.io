@@ -29,7 +29,7 @@ function getFormInfo() {
 };
 
 function showInfo() {
-  window.onload = function() {
+  //window.onload = function() {
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     if (storedProfiles) {
       //figure out how to display one profile at a time
