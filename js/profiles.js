@@ -20,7 +20,6 @@ function getFormInfo() {
 
     arrayOfProfiles.push(entry);
     localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
-  }
   //for (var key in entry) {
     //var person = JSON.parse(entry[key]);
     //var div = document.getElementById('profiles-list').lastChild;
