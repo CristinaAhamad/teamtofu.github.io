@@ -1,7 +1,7 @@
 function getFormInfo() {
   //if there isn't an array yet, make one
   if (localStorage.length == 0) {
-    var arrayOfProfiles = [];
+    var arrayOfProfiles = new Array();
   }
     //creates new profile entry
   var entry = [];
@@ -18,7 +18,7 @@ function getFormInfo() {
       //var dislikes;
       //var likes;
 
-  arrayOfProfiles.append(JSON.stringify(entry));
+  arrayOfProfiles.append(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
   //for (var key in entry) {
     //var person = JSON.parse(entry[key]);
