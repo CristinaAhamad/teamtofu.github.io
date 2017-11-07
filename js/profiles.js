@@ -22,6 +22,7 @@ function getFormInfo() {
   var allergies = [];
      allergies.push($("#allergies").val());
   entry.push(allergies);
+  console.log(allergies);
 
   var health = [];
       health.push($("#health").val());
@@ -68,6 +69,9 @@ function addToProfilePage(profName) {
     document.getElementById('profile-photo').value = currentPhoto;
   }
 };
+
+
+
 
 /* Buttons for Preferences */
 $(document).ready(function() {
