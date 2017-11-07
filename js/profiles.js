@@ -1,6 +1,6 @@
 function getFormInfo() {
   //if there isn't an array yet, make one
-  if (localStorage.length == 0) {
+  if (!localStorage.length) {
     var arrayOfProfiles = [];
   }
     //creates new profile entry
