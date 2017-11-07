@@ -86,7 +86,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input type="text" id="allergies" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            $(wrapper).append('<div><input type="text" class="allergies" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
         }
     });
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input type="text" id="health" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            $(wrapper).append('<div><input type="text" class="health" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
         }
     });
 
@@ -124,7 +124,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input type="text" id="dislikes" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            $(wrapper).append('<div><input type="text" class="dislikes" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
         }
     });
 
@@ -143,7 +143,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){ //max input box allowed
             x++; //text box increment
-            $(wrapper).append('<div><input type="text" id="likes" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            $(wrapper).append('<div><input type="text" class="likes" name="mytext[]"/><a href="#" class="remove_field">Remove</a></div>'); //add input box
         }
     });
 
