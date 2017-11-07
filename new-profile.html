@@ -12,7 +12,7 @@
         <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
       </form>
       <h1> New Profile </h1></br>
-      <form id="profile-form" action="" method="get" onsubmit="getFormInfo(); return false">
+      <form id="profile-form" action="" method="get">
         <fieldset>
           <legend>GENERAL</legend>
         <input type="text" id="firstname" placeholder="First Name" required></input> </br>
@@ -25,8 +25,7 @@
         </select> </br>
         <input type="number" id="weight" min="1" max="500"> lbs.</input> </br>
         <input type="number" id="height-ft" min="0" max="8"> ft.
-        <input type="number" id="height-in" min="0" max="11"> in.
-      </input></br>
+        <input type="number" id="height-in" min="0" max="11"> in. </input></br>
       </fieldset>
     </br>
       <fieldset>
@@ -61,7 +60,8 @@
 
         <input type="submit" id="submit" class="addbutton" value=&#10004
           onclick="getFormInfo()">
-        <a onclick="getFormInfo()" href="http://cristinaahamad.github.io/teamtofu/profiles-page.html" size="6">  SUBMIT</a></input></br>
+        <a onclick="getFormInfo()" href="http://cristinaahamad.github.io/teamtofu/profiles-page.html"
+          size="6">  SUBMIT</a></input></br>
       </form>
     </body>
   </html>
