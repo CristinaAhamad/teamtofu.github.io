@@ -1,16 +1,16 @@
 function getFormInfo() {
   //if there isn't an array yet, make one
-  if (!window.localStorage) {
+  if (localStorage.length == 0) {
     var arrayOfProfiles = [];
   }
     //creates new profile entry
     var entry = [];
-      entry.push(document.getElementById('firstname').value);
-      entry.push(document.getElementById('lastname').value);
-      entry.push(document.getElementById('sex').value);
-      entry.push(document.getElementById('weight').value);
-      entry.push(document.getElementById('height-ft').value);
-      entry.push(document.getElementById('height-in').value);
+    entry.push(document.getElementById('firstname').value);
+    entry.push(document.getElementById('lastname').value);
+    entry.push(document.getElementById('sex').value);
+    entry.push(document.getElementById('weight').value);
+    entry.push(document.getElementById('height-ft').value);
+    entry.push(document.getElementById('height-in').value);
 
       //Create individual arrays to save Preferences
       //var allergies;
