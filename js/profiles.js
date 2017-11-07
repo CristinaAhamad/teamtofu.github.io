@@ -20,7 +20,7 @@ function getFormInfo() {
 
   //arrayOfProfiles = localStorage.getItem("profiles-list");
   arrayOfProfiles.push(entry);
-  window.localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
+  localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
   //for (var key in entry) {
     //var person = JSON.parse(entry[key]);
     //var div = document.getElementById('profiles-list').lastChild;
@@ -35,6 +35,6 @@ function showInfo() {
     if (storedProfiles) {
       //figure out how to display one profile at a time
       //arrayOfProfiles[0] should be the first one
-      document.getElementById('display-profile').innerHTML;
+      document.getElementById('display-profile').innerHTML = storedProfiles[0];
     }
 }
