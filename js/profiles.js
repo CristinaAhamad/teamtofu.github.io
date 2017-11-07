@@ -19,13 +19,13 @@ function getFormInfo() {
   entry.push($("#height-in").val());
 
   //Create individual arrays to save Preferences
-  var allergies = [];
-     allergies.push($(".allergies").val());
-  entry.push(allergies);
+  var allergies = $(".allergies").val();
   console.log(allergies);
+  entry.push(allergies);
 
   var health = [];
       health.push($(".health").val());
+      console.log(health);
   entry.push(health);
 
   var dislikes = [];
