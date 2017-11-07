@@ -17,7 +17,7 @@ function getFormInfo() {
       //var health;
       //var dislikes;
       //var likes;
-  //console.log(entry);
+  console.log(entry);
   arrayOfProfiles.push(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
   //for (var key in entry) {
