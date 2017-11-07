@@ -1,3 +1,7 @@
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+
 function getFormInfo() {
   //if there isn't an array yet, make one
   console.log(localStorage.length);
@@ -60,4 +64,4 @@ function addToProfilePage(profName) {
   } else {
     document.getElementById('profile-photo').value = currentPhoto;
   }
-}
+};
