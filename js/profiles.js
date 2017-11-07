@@ -21,7 +21,7 @@ function getFormInfo() {
 
   //arrayOfProfiles = localStorage.getItem("profiles-list");
   arrayOfProfiles.push(entry);
-  localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
+  localStorage.setItem('profiles-list', JSON.stringify(arrayOfProfiles));
   //for (var key in entry) {
     //var person = JSON.parse(entry[key]);
     //var div = document.getElementById('profiles-list').lastChild;
@@ -32,7 +32,7 @@ function getFormInfo() {
 
 function showInfo() {
   //window.onload = function() {
-    var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
+    var storedProfiles = JSON.parse(localStorage.getItem('profiles-list'));
     if (storedProfiles) {
       //figure out how to display one profile at a time
       //arrayOfProfiles[0] should be the first one
@@ -40,6 +40,19 @@ function showInfo() {
     }
 };
 
-function addToProfilePage(var profName) {
+function addToProfilePage(profName) {
   //dynamically add profile photo and name to profiles page
+  var currentFirst = localStorage.getItem('firstname');
+  var currentLast = localStorage.getItem('lastname');
+  var currentPhoto = localStorage.getItem('profile-photo');
+
+  document.getElementById('firstname').value = currentFirst;
+  document.getElementById('lastname').value = currentLast;
+
+  //if no profile photo, default
+  if(!currentPhoto) {
+    document.getElementById('profile-photo').value="img/jrdo.png";
+  } else {
+    document.getElementById('profile-photo').value = currentPhoto;
+  }
 }
