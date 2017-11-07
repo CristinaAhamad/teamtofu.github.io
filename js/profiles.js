@@ -5,6 +5,8 @@ function getFormInfo() {
   console.log(localStorage.length);
   if (localStorage.length == 0) {
     var arrayOfProfiles = [];
+  } else {
+    var arrayOfProfiles = JSON.parse(localStorage["arrayOfProfiles"]);
   }
     //creates new profile entry
   var entry = [];
@@ -24,7 +26,7 @@ function getFormInfo() {
   console.log(entry);
   console.log(arrayOfProfiles);
   arrayOfProfiles.push(entry);
-  localStorage.setItem('profiles-list', JSON.stringify(arrayOfProfiles));
+  localStorage["arrayOfProfiles"] =  JSON.stringify(arrayOfProfiles);
 
   //for (var key in entry) {
     //var person = JSON.parse(entry[key]);
