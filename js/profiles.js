@@ -22,12 +22,12 @@ function getFormInfo() {
     arrayOfProfiles.push(entry);
     localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
   }
-  for (var key in entry) {
-    var person = JSON.parse(entry[key]);
-    var div = document.getElementById('profiles-list').lastChild;
-    div.innerHTML = div.innerHTML + "<div class='entry'><ul class='no-list-style'><li><h3>"+person.firstname+" "+person.lastname+"</h3>
-    </li><li>"+person.sex+"</li><li>"+person.lbs+"</li><li>"+person.ft+"</li><li>"+person.inch+"</li></ul></div>";
-  }
+  //for (var key in entry) {
+    //var person = JSON.parse(entry[key]);
+    //var div = document.getElementById('profiles-list').lastChild;
+    //div.innerHTML = div.innerHTML + "<div class='entry'><ul class='no-list-style'><li><h3>"+person.firstname+" "+person.lastname+"</h3>
+    //</li><li>"+person.sex+"</li><li>"+person.lbs+"</li><li>"+person.ft+"</li><li>"+person.inch+"</li></ul></div>";
+  //}
 };
 
 function showInfo() {
@@ -36,7 +36,7 @@ function showInfo() {
     if (storedProfiles) {
       //figure out how to display one profile at a time
       //arrayOfProfiles[0] should be the first one
-      document.getElementById("display-profile").innerHTML;
+      document.getElementById('display-profile').innerHTML;
     }
   }
 }
