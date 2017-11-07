@@ -4,11 +4,74 @@
       <title>Recipe 3</title>
       <link href="css/main.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />
+<!--Custom CSS-->
+      <link rel="stylesheet" href="css/recipe.css">
   </head>
   <body>
     <form>
       <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
     </form>
-    <a href="https://cristinaahamad.github.io/teamtofu/review3.html">Add Review</a>
+  <!--Header-->
+  <div>
+    <h1>Sugar Free Brownies</h1>
+  </div>
+    <img class="header" src="img/recipe3.jpg">
+  <!--Tags-->
+    <div>
+      <meta http-equiv="vegan" content="5;url=https://cristinaahamad.github.io/teamtofu/searchrecipes.html">
+    </div>
+  <!--Tabs-->
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Description')">Description</button>
+        <button class="tablinks" onclick="openTab(event, 'Ingredients')">Ingredients</button>
+        <button class="tablinks" onclick="openTab(event, 'Recipe')">Recipe</button>
+        <button class="tablinks" onclick="openTab(event, 'Reviews')">Reviews</button>
+      </div>
+  <!--Tab Content-->
+
+      <div id="Description" class="tabcontent">
+        <h2>Description</h2>
+        <p>A perfect sweet tooth-pleaser that lacks sugar for those who are diabetic. This
+          recipe is so delicious you won't even miss the sugar!</p>
+      </div>
+      <div id="Ingredients" class="tabcontent">
+        <h2>Ingredients</h2>
+        <ul>
+          <li>1/2 cup margarine</li>
+          <li>1/8 tsp salt</li>
+          <li>1/4 cup unsweetened cocoa powder</li>
+          <li>2 eggs</li>
+          <li>3/4 cup all-purpose flour</li>
+          <li>1/4 tsp baking powder</li>
+          <li>1/2 tsp vanilla</li>
+          <li>1 cup sugar free chocolate fudge flavored instant pudding</li>
+          <li>walnuts (optional)</li>
+        </ul>
+      </div>
+      <div id="Recipe" class="tabcontent">
+        <h2>Recipe</h2>
+        <ol>
+          <li>Preheat oven to 350 degrees F (175 degrees C). Grease and flour an 8x8 inch pan.</li>
+          <li>In a small saucepan over medium heat, melt margarine and cocoa together,
+            stirring occasionally until smooth. Remove from heat and set aside to cool.
+            In a large bowl, beat eggs until frothy. Stir in the instant chocolate pudding and vanilla.
+            Combine the flour , baking powder, and salt; stir into the egg mixture then mix in the cocoa and
+            margarine. Finally stir in the 1/4 cup of milk and if desired, the walnuts.
+            Pour into the prepared pan.</li>
+          <li>Bake for 25 to 30 minutes in the preheated oven, until a toothpick inserted
+            into the center, comes out clean. </li>
+        </ol>
+      </div>
+      <div id="Reviews" class="tabcontent">
+        <h2>Reviews</h2>
+        <p>"I have gestational diabetes and all I've wanted lately is a brownie!
+          Made these and the truth is, a regular brownie is ten times better -
+          but for a sugar-free brownie, these are pretty darn good! They are nice
+          and fudgey and took care of my craving."</p>
+      </div>
+
+      <a href="https://cristinaahamad.github.io/teamtofu/review3.html">Add Review</a>
+  <!--Custom JavaScript-->
+      <script type="text/javascript" src="js/recipe.js"></script>
   </body>
 </html>

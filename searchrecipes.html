@@ -3,6 +3,7 @@
   <head>
       <link href="css/main.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />
+      <script src="js/search.js"></script>
       <title>Search Recipes</title>
   </head>
   <body>
@@ -10,8 +11,27 @@
       <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
     </form>
     <h1>Search Recipes</h1>
-    <a href="https://cristinaahamad.github.io/teamtofu/recipe1.html">Meal 1</a>
-    <a href="https://cristinaahamad.github.io/teamtofu/recipe2.html">Meal 2</a>
-    <a href="https://cristinaahamad.github.io/teamtofu/recipe3.html">Meal 3</a>
+
+    <h2>Filter out</h2>
+      <input type="checkbox" onclick="filterSelection('John', 'Jr')" name="category"> Jane
+      <input type="checkbox" onclick="filterSelection('John')" name="category"> John
+      <input type="checkbox" onclick="filterSelection('Jr')" name="category"> Jr
+
+      <div class="container" window.onload="filterSelection("all")">
+        <a href="https://cristinaahamad.github.io/teamtofu/recipe1.html">
+          <div class="filterDiv Jane">Meal 1</div></a>
+        <a href="https://cristinaahamad.github.io/teamtofu/recipe2.html">
+          <div class="filterDiv Jane John">Meal 2</div></a>
+        <a href="https://cristinaahamad.github.io/teamtofu/recipe3.html">
+          <div class="filterDiv John">Meal 3</div></a>
+        <div class="filterDiv John Jr">Meal 4</div>
+        <div class="filterDiv Jane John Jr">Meal 5</div>
+        <div class="filterDiv Jane">Meal 6</div>
+        <div class="filterDiv John Jr">Meal 7</div>
+        <div class="filterDiv Jane Jr">Meal 8</div>
+        <div class="filterDiv Jane John Jr">Meal 9</div>
+        <div class="filterDiv Jane">Meal 10</div>
+      </div>
+
   </body>
 </html>
