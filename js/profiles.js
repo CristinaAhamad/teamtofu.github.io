@@ -1,22 +1,42 @@
 function getFormInfo() {
-  var firstname = document.getElementById('firstname').value;
-  localStorage.setItem("firstname", firstname.value);
-  var lastname = localStorage.getElementItem('lastname').value;
-  localStorage.setItem("lastname", lastname.value);
-  var sex = localStorage.getElementItem('sex').value;
-  localStorage.setItem("sex", sex.value);
-  var lbs = localStorage.getElementItem('weight').value;
-  localStorage.setItem("weight", lbs.value);
-  var ft = localStorage.getElementItem('height-ft').value;
-  localStorage.setItem("height-ft", ft.value);
-  var inch = localStorage.getElementItem('height-in').value;
-  localStorage.setItem("height-in", inch.value);
+  //if there isn't an array yet, make one
+  if (!arrayOfProfiles) {
+    var arrayOfProfiles = [];
+  } else {
+    //creates new profile entry
+    var entry = JSON.stringify({
+      firstname:document.getElementById('firstname').value,
+      lastname:document.getElementById('lastname').value,
+      sex:document.getElementById('sex').value,
+      lbs:document.getElementById('weight').value,
+      ft:document.getElementById('height-ft').value,
+      inch:document.getElementById('height-in').value,
 
-  //Preferences
+      //Create individual arrays to save Preferences
+      //var allergies;
+      //var health;
+      //var dislikes;
+      //var likes;
+    });
 
+    arrayOfProfiles.push(entry);
+    localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
+  }
+  for (var key in entry) {
+    var person = JSON.parse(entry[key]);
+    var div = document.getElementById('profiles-list').lastChild;
+    div.innerHTML = div.innerHTML + "<div class='entry'><ul class='no-list-style'><li><h3>"+person.firstname+" "+person.lastname+"</h3>
+    </li><li>"+person.sex+"</li><li>"+person.lbs+"</li><li>"+person.ft+"</li><li>"+person.inch+"</li></ul></div>";
+  }
+};
 
-}
-
-$('#profile').showInfo() {
-  var storedFN = localStorage.getItem("firstname");
+function showInfo() {
+  window.onload = function() {
+    var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
+    if (storedProfiles) {
+      //figure out how to display one profile at a time
+      //arrayOfProfiles[0] should be the first one
+      document.getElementById("display-profile").innerHTML;
+    }
+  }
 }
