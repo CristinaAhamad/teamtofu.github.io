@@ -2,7 +2,7 @@ function getFormInfo() {
   //if there isn't an array yet, make one
   if (!arrayOfProfiles) {
     var arrayOfProfiles = [];
-  } else {
+  }
     //creates new profile entry
     var entry = [];
       entry.push(document.getElementById('firstname').value);
@@ -17,7 +17,6 @@ function getFormInfo() {
       //var health;
       //var dislikes;
       //var likes;
-    };
 
     arrayOfProfiles.push(entry);
     localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
