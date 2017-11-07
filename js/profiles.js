@@ -4,13 +4,13 @@ function getFormInfo() {
     var arrayOfProfiles = [];
   } else {
     //creates new profile entry
-    var entry = {
-      firstname:document.getElementById('firstname').value,
-      lastname:document.getElementById('lastname').value,
-      sex:document.getElementById('sex').value,
-      lbs:document.getElementById('weight').value,
-      ft:document.getElementById('height-ft').value,
-      inch:document.getElementById('height-in').value,
+    var entry = [];
+      entry.push(document.getElementById('firstname').value);
+      entry.push(document.getElementById('lastname').value);
+      entry.push(document.getElementById('sex').value);
+      entry.push(document.getElementById('weight').value);
+      entry.push(document.getElementById('height-ft').value);
+      entry.push(document.getElementById('height-in').value);
 
       //Create individual arrays to save Preferences
       //var allergies;
