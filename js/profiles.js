@@ -1,12 +1,10 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
 function getFormInfo() {
   //if there isn't an array yet, make one
   console.log(localStorage.length);
   if (localStorage.length == 0) {
     var arrayOfProfiles = [];
   } else {
-    var arrayOfProfiles = JSON.parse(localStorage["arrayOfProfiles"]);
+    var arrayOfProfiles = JSON.parse(localStorage.getItem("profiles-list"));
   }
     //creates new profile entry
   var entry = [];
@@ -26,7 +24,7 @@ function getFormInfo() {
   console.log(entry);
   console.log(arrayOfProfiles);
   arrayOfProfiles.push(entry);
-  localStorage["arrayOfProfiles"] =  JSON.stringify(arrayOfProfiles);
+  localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
 
   //for (var key in entry) {
     //var person = JSON.parse(entry[key]);
@@ -38,7 +36,7 @@ function getFormInfo() {
 
 function showInfo() {
   //window.onload = function() {
-    var storedProfiles = JSON.parse(localStorage.getItem('profiles-list'));
+    var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     if (storedProfiles) {
       //figure out how to display one profile at a time
       //arrayOfProfiles[0] should be the first one
