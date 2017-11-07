@@ -18,7 +18,7 @@ function getFormInfo() {
       //var dislikes;
       //var likes;
 
-  arrayOfProfiles = localStorage.getItem("profiles-list");
+  //arrayOfProfiles = localStorage.getItem("profiles-list");
   arrayOfProfiles.push(entry);
   window.localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
   //for (var key in entry) {
