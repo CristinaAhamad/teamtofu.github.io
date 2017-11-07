@@ -4,13 +4,13 @@ function getFormInfo() {
     var arrayOfProfiles = [];
   }
     //creates new profile entry
-    var entry = [];
-    entry.push($("#firstname").val());
-    entry.push($("#lastname").val());
-    entry.push($("#sex").val());
-    entry.push($("#weight").val());
-    entry.push($("#height-ft").val());
-    entry.push($("#height-in").val());
+  var entry = [];
+  entry.push($("#firstname").val());
+  entry.push($("#lastname").val());
+  entry.push($("#sex").val());
+  entry.push($("#weight").val());
+  entry.push($("#height-ft").val());
+  entry.push($("#height-in").val());
 
       //Create individual arrays to save Preferences
       //var allergies;
@@ -18,8 +18,8 @@ function getFormInfo() {
       //var dislikes;
       //var likes;
 
-    arrayOfProfiles.push(entry);
-    localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
+  arrayOfProfiles.push(entry);
+  localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
   //for (var key in entry) {
     //var person = JSON.parse(entry[key]);
     //var div = document.getElementById('profiles-list').lastChild;
