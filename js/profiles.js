@@ -49,15 +49,23 @@ function getFormInfo() {
 };
 
 
-function showInfo() {
+function showInfo(index) {
   //window.onload = function() {
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
-    if (storedProfiles) {
-      //figure out how to display one profile at a time
-      //arrayOfProfiles[0] should be the first one
-      document.getElementById('display-profile').innerHTML = storedProfiles[0];
-    }
-    $("#firstname").text("name");
+    var person = storedProfiles[index];
+
+    $(document).append("<h1 display="inline" clear="none" id="firstname">"+person[0]+"<h1 display="inline" clear="none" id="lastname">"+ person[1]+ "</h1>");
+    $(document).append("</br> </br> <fieldset> <legend>GENERAL</legend>");
+    $(document).append("<text size="30" id="age"/>"+person[2]+" yrs. old </text></br>");
+    $(document).append("<text size="30" id="sex"/>"+person[3]+"</text></br>");
+    $(document).append("<text size="30" id="weight"/>"+person[4]+"lbs.</text> </br>");
+    $(document).append("<text size="30" id="height-ft"/>"+person[5]+"ft.");
+    $(document).append("<text size="30" id="height-in"/>"+person[6]+"in. </text></text></br>");
+    $(document).append("</fieldset> <fieldset> <legend>PREFERENCES</legend> <div> <h3> Allergies: </h3>");
+    $(document).append("<div> <h3> Health Concerns: </h3>");
+    $(document).append("<div> <h3> Dislikes: </h3>");
+    $(document).append("<div> <h3> Likes: </h3>");
+    $(document).append("</fieldset>");
 };
 
 
