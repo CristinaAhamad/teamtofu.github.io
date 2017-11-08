@@ -1,4 +1,7 @@
-$( document ).ready(function getFormInfo() {
+$( document ).ready(function(){
+});
+
+function getFormInfo() {
   //if there isn't an array yet, make one
   if (localStorage.length == 0) {
     var arrayOfProfiles = [];
@@ -32,11 +35,9 @@ $( document ).ready(function getFormInfo() {
       lArray.push($(".likes").val());
   entry.push(lArray);
 
-  localStorage.length = arrayOfProfiles.length;
-
   arrayOfProfiles.push(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
-  
+
   addToProfilePage();
 });
 
@@ -53,10 +54,10 @@ function showInfo(index) {
     $(document).append('<text size="30" id="weight"/>'+person[4]+'lbs.</text> </br>');
     $(document).append('<text size="30" id="height-ft"/>'+person[5]+'ft.');
     $(document).append('<text size="30" id="height-in"/>'+person[6]+'in. </text></text></br>');
-    $(document).append('</fieldset> <fieldset> <legend>PREFERENCES</legend> <div> <h3> Allergies: </h3>');
-    $(document).append('<div> <h3> Health Concerns: </h3>');
-    $(document).append('<div> <h3> Dislikes: </h3>');
-    $(document).append('<div> <h3> Likes: </h3>');
+    $(document).append('</fieldset> <fieldset> <legend>PREFERENCES</legend> <div> <h3> Allergies: </h3> <text size="30"/> '+person[7]+' </text></div>');
+    $(document).append('<div> <h3> Health Concerns: </h3> <text size="30"/> '+person[8]+' </text></div>');
+    $(document).append('<div> <h3> Dislikes: </h3><text size="30"/> '+person[9]+' </text></div>');
+    $(document).append('<div> <h3> Likes: </h3><text size="30"/> '+person[10]+' </text></div>');
     $(document).append('</fieldset>');
 };
 
