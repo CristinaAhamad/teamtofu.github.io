@@ -19,22 +19,28 @@ function getFormInfo() {
   entry.push($("#height-in").val());
 
   //Create individual arrays to save Preferences
-  var allergies = $(".allergies").val();
-  console.log(allergies);
-  entry.push(allergies);
+  var aArray = [];
+  $('.allergies').each(function() {
+    var id = $(this).attr(id);
+    if(id != undefined) {
+      aArray.push(id);
+    }
+  });
 
-  var health = [];
+  console.log(aArray);
+  entry.push(aArray);
+
+  var hArray = [];
       health.push($(".health").val());
-      console.log(health);
-  entry.push(health);
+  entry.push(hArray);
 
-  var dislikes = [];
+  var dArray = [];
       dislikes.push($(".dislikes").val());
-  entry.push(dislikes);
+  entry.push(dArray);
 
-  var likes =[];
+  var lArray =[];
       likes.push($(".likes").val());
-  entry.push(likes);
+  entry.push(lArray);
 
   localStorage.length = arrayOfProfiles.length;
   console.log(entry);
