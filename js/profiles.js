@@ -1,7 +1,4 @@
-$( document ).ready(function() {
-});
-
-function getFormInfo() {
+$( document ).ready(function getFormInfo() {
   //if there isn't an array yet, make one
   if (localStorage.length == 0) {
     var arrayOfProfiles = [];
@@ -20,7 +17,7 @@ function getFormInfo() {
 
   //Create individual arrays to save Preferences
   var aArray = [];
-  $('.allergies').each(function() {
+  $(".allergies").each(function() {
     var id = $(this).attr(id);
     if(id != undefined) {
       aArray.push(id);
@@ -46,44 +43,50 @@ function getFormInfo() {
   console.log(entry);
   arrayOfProfiles.push(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
-};
+  addToProfilePage();
+});
 
 
-function showInfo(index) {
+$( document ).ready(function showInfo(index) {
   //window.onload = function() {
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     var person = storedProfiles[index];
 
-    $(document).append("<h1 display="inline" clear="none" id="firstname">"+person[0]+"<h1 display="inline" clear="none" id="lastname">"+ person[1]+ "</h1>");
-    $(document).append("</br> </br> <fieldset> <legend>GENERAL</legend>");
-    $(document).append("<text size="30" id="age"/>"+person[2]+" yrs. old </text></br>");
-    $(document).append("<text size="30" id="sex"/>"+person[3]+"</text></br>");
-    $(document).append("<text size="30" id="weight"/>"+person[4]+"lbs.</text> </br>");
-    $(document).append("<text size="30" id="height-ft"/>"+person[5]+"ft.");
-    $(document).append("<text size="30" id="height-in"/>"+person[6]+"in. </text></text></br>");
-    $(document).append("</fieldset> <fieldset> <legend>PREFERENCES</legend> <div> <h3> Allergies: </h3>");
-    $(document).append("<div> <h3> Health Concerns: </h3>");
-    $(document).append("<div> <h3> Dislikes: </h3>");
-    $(document).append("<div> <h3> Likes: </h3>");
-    $(document).append("</fieldset>");
-};
+    $(document).append('<h1 display="inline" clear="none" id="firstname">'+person[0]+'<h1 display="inline" clear="none" id="lastname">'+ person[1]+ '</h1>');
+    $(document).append('</br> </br> <fieldset> <legend>GENERAL</legend>');
+    $(document).append('<text size="30" id="age"/>'+person[2]+' yrs. old </text></br>');
+    $(document).append('<text size="30" id="sex"/>'+person[3]+'</text></br>');
+    $(document).append('<text size="30" id="weight"/>'+person[4]+'lbs.</text> </br>');
+    $(document).append('<text size="30" id="height-ft"/>'+person[5]+'ft.');
+    $(document).append('<text size="30" id="height-in"/>'+person[6]+'in. </text></text></br>');
+    $(document).append('</fieldset> <fieldset> <legend>PREFERENCES</legend> <div> <h3> Allergies: </h3>');
+    $(document).append('<div> <h3> Health Concerns: </h3>');
+    $(document).append('<div> <h3> Dislikes: </h3>');
+    $(document).append('<div> <h3> Likes: </h3>');
+    $(document).append('</fieldset>');
+});
 
 
-function addToProfilePage(profName) {
+function addToProfilePage() {
   //dynamically add profile photo and name to profiles page
-  var currentFirst = localStorage.getItem('firstname');
-  var currentLast = localStorage.getItem('lastname');
-  var currentPhoto = localStorage.getItem('profile-photo');
+  var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
+  var person = storedProfiles[storedProfiles.length - 1]; //get newly added profile
 
-  document.getElementById('firstname').value = currentFirst;
-  document.getElementById('lastname').value = currentLast;
+  var currentFirst = person[0];
+  var currentLast = person[1];
+  var fullName = currentFirst+" "+currentLast;
+
+  var currentPhoto = person[10];
 
   //if no profile photo, default
   if(!currentPhoto) {
-    document.getElementById('profile-photo').value="img/jrdo.png";
-  } else {
-    document.getElementById('profile-photo').value = currentPhoto;
+    currentPhoto = "img/jrdo.png";
   }
+
+    $(".profilespg").append('<img src='currentPhoto' style="width:150px;height:140px;border:0;" href="http://cristinaahamad.github.io/teamtofu/profile.html">');
+    $(".profilespg").append('a href="http://cristinaahamad.github.io/teamtofu/jr-doe.html"> <font class="prof-name" size="5">'fullName'</font>');
+    $(".profilespg").append('</a> </br> </br>');
+
 };
 
 
