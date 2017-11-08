@@ -38,7 +38,8 @@ function getFormInfo() {
 
 
 function showInfo(index) {
-  //window.onload = function() {
+    console.log("showinfo");
+
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     var person = storedProfiles[index];
 
@@ -58,6 +59,7 @@ function showInfo(index) {
 
 
 function addToProfilePage() {
+  console.log("add prof");
   //dynamically add profile photo and name to profiles page
   var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
   var person = storedProfiles[storedProfiles.length - 1]; //get newly added profile
