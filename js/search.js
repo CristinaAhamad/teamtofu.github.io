@@ -1,32 +1,58 @@
+resetAll();
 
-filterSelection("all")
-      function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("filterDiv");
-        if (c == "all") c = "";
-        for (i = 0; i < x.length; i++) {
-          RemoveClass(x[i], "show");
-          if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
-        }
-      }
+function resetAll() {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
 
-      function AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-        }
-      }
+  for (i = 0; i < x.length; i++) {
+    AddClass(x[i], "show");
+  }
+}
 
-      function RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-          while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-          }
-        }
-        element.className = arr1.join(" ");
-      }
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    if (x[i].className.indexOf(c) < 0) RemoveClass(x[i], "show");
+  }
+}
+
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+var filters = document.getElementById('filters');
+
+filters.addEventListener('click', handleFilters);
+
+function handleFilters(event) {
+  if (event.target.type === 'checkbox') {
+    resetAll();
+
+    var selected = document.querySelectorAll('#filters input[type="checkbox"]:checked');
+    if (selected.length) {
+      selected.forEach(function (item) {
+        filterSelection(item.name);
+      })
+    }
+  }
+}
