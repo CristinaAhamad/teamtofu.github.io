@@ -38,24 +38,22 @@ function getFormInfo() {
 
 
 function showInfo() {
-    console.log("showinfo");
 
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     var person = storedProfiles[storedProfiles.length-1];
-    console.log(person);
 
-    $(".newprof").append('<h1 display="inline" clear="none" id="firstname">'+person[0]+'<h1 display="inline" clear="none" id="lastname">'+ person[1]+ '</h1>');
-    $(".newprof").append('</br> </br> <fieldset> <legend>GENERAL</legend>');
+    $(".newprof").append('<h1 display="inline" clear="none" id="firstname">'+person[0]+'<h1 display="inline" clear="none" id="lastname">'+" "+person[1]+ '</h1>');
+    $(".newprof").append('</br> </br> <legend>GENERAL</legend>');
     $(".newprof").append('<text size="30" id="age"/>'+person[2]+' yrs. old </text></br>');
     $(".newprof").append('<text size="30" id="sex"/>'+person[3]+'</text></br>');
     $(".newprof").append('<text size="30" id="weight"/>'+person[4]+'lbs.</text> </br>');
     $(".newprof").append('<text size="30" id="height-ft"/>'+person[5]+'ft.');
     $(".newprof").append('<text size="30" id="height-in"/>'+person[6]+'in. </text></text></br>');
-    $(".newprof").append('</fieldset> <fieldset> <legend>PREFERENCES</legend> <div> <h3> Allergies: </h3> <text size="30"/> '+person[7]+' </text></div>');
+    $(".newprof").append('<legend>PREFERENCES</legend> <div> <h3> Allergies: </h3> <text size="30"/> '+person[7]+' </text></div>');
     $(".newprof").append('<div> <h3> Health Concerns: </h3> <text size="30"/> '+person[8]+' </text></div>');
     $(".newprof").append('<div> <h3> Dislikes: </h3><text size="30"/> '+person[9]+' </text></div>');
     $(".newprof").append('<div> <h3> Likes: </h3><text size="30"/> '+person[10]+' </text></div>');
-    $(".newprof").append('</fieldset>');
+    //$(".newprof").append('</fieldset>');
 };
 
 
@@ -69,17 +67,15 @@ function addToProfilePage() {
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  var currentPhoto = person[10];
+  var currentPhoto = person[11];
 
   //if no profile photo, default
   if(!currentPhoto) {
     currentPhoto = "img/jrdo.png";
   }
 
-  $.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function () {
-    $(".profilespg").append('<img src='+currentPhoto+' style="width:150px;height:140px;border:0;" href="https://cristinaahamad.github.io/teamtofu/profile.html">');
-    $(".profilespg").append('a href="https://cristinaahamad.github.io/teamtofu/profile.html"> <font class="prof-name" size="5">'+fullName+'</font>');
-    $(".profilespg").append('</a> </br> </br>');
-  });
+  $(".profilespg").append('<img src='+currentPhoto+' style="width:150px;height:140px;border:0;" href="https://cristinaahamad.github.io/teamtofu/profile.html">');
+  $(".profilespg").append('a href="https://cristinaahamad.github.io/teamtofu/profile.html"> <font class="prof-name" size="5">'+fullName+'</font>');
+  $(".profilespg").append('</a> </br> </br>');
 
 };
