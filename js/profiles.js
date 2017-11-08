@@ -34,6 +34,8 @@ function getFormInfo() {
 
   arrayOfProfiles.push(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
+
+  addToProfilePage();
 };
 
 
