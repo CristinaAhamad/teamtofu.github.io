@@ -48,7 +48,7 @@ function showInfo() {
     $(".newprof").append('<text size="30" id="sex"/>'+person[3]+'</text></br>');
     $(".newprof").append('<text size="30" id="weight"/>'+person[4]+'lbs.</text> </br>');
     $(".newprof").append('<text size="30" id="height-ft"/>'+person[5]+'ft.');
-    $(".newprof").append('<text size="30" id="height-in"/>'+person[6]+'in. </text></text></br>');
+    $(".newprof").append('<text size="30" id="height-in"/>'+person[6]+'in. </text></text></br></br>');
     $(".newprof").append('<legend>PREFERENCES</legend> <div> <h3> Allergies: </h3> <text size="30"/> '+person[7]+' </text></div>');
     $(".newprof").append('<div> <h3> Health Concerns: </h3> <text size="30"/> '+person[8]+' </text></div>');
     $(".newprof").append('<div> <h3> Dislikes: </h3><text size="30"/> '+person[9]+' </text></div>');
@@ -74,8 +74,8 @@ function addToProfilePage() {
     currentPhoto = "img/jrdo.png";
   }
 
-  $(".profilespg").append('<img src='+currentPhoto+' style="width:150px;height:140px;border:0;" href="https://cristinaahamad.github.io/teamtofu/profile.html">');
-  $(".profilespg").append('a href="https://cristinaahamad.github.io/teamtofu/profile.html"> <font class="prof-name" size="5">'+fullName+'</font>');
-  $(".profilespg").append('</a> </br> </br>');
+  $("#profilespg").append('<img src='+currentPhoto+' style="width:150px;height:140px;border:0;" href="https://cristinaahamad.github.io/teamtofu/profile.html">');
+  $("#profilespg").append('a href="https://cristinaahamad.github.io/teamtofu/profile.html"> <font class="prof-name" size="5">'+fullName+'</font>');
+  $("#profilespg").append('</a> </br> </br>');
 
 };
