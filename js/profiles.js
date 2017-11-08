@@ -36,11 +36,12 @@ $( document ).ready(function getFormInfo() {
 
   arrayOfProfiles.push(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
+  
   addToProfilePage();
 });
 
 
-$( document ).ready(function showInfo(index) {
+function showInfo(index) {
   //window.onload = function() {
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     var person = storedProfiles[index];
@@ -57,7 +58,7 @@ $( document ).ready(function showInfo(index) {
     $(document).append('<div> <h3> Dislikes: </h3>');
     $(document).append('<div> <h3> Likes: </h3>');
     $(document).append('</fieldset>');
-});
+};
 
 
 function addToProfilePage() {
