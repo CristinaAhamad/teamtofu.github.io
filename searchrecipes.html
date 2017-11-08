@@ -3,7 +3,7 @@
   <head>
       <link href="css/main.css" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />
-      <script src="js/search.js"></script>
+
       <title>Search Recipes</title>
   </head>
   <body>
@@ -12,60 +12,35 @@
     </form>
     <h1>Search Recipes</h1>
 
-    <h2>Filter out</h2>
-      <input type="checkbox" onclick="filterSelection('John', 'Jr')" name="category"> Jane
+    <h2>Who's eating?</h2>
+      <input type="checkbox" onclick="filterSelection('Jane')" name="category"> Jane
       <input type="checkbox" onclick="filterSelection('John')" name="category"> John
       <input type="checkbox" onclick="filterSelection('Jr')" name="category"> Jr
 
-      <div class="container" window.onload="filterSelection("all")">
-        <a href="https://cristinaahamad.github.io/teamtofu/recipe1.html">
-          <div class="filterDiv Jane">Meal 1</div></a>
-        <a href="https://cristinaahamad.github.io/teamtofu/recipe2.html">
-          <div class="filterDiv Jane John">Meal 2</div></a>
-        <a href="https://cristinaahamad.github.io/teamtofu/recipe3.html">
-          <div class="filterDiv John">Meal 3</div></a>
-        <div class="filterDiv John Jr">Meal 4</div>
-        <div class="filterDiv Jane John Jr">Meal 5</div>
-        <div class="filterDiv Jane">Meal 6</div>
-        <div class="filterDiv John Jr">Meal 7</div>
-        <div class="filterDiv Jane Jr">Meal 8</div>
-        <div class="filterDiv Jane John Jr">Meal 9</div>
-        <div class="filterDiv Jane">Meal 10</div>
+      <div class="container">
+       <a href="https://cristinaahamad.github.io/teamtofu/recipe1.html">
+         <div class="filterDiv Jane">Meal 1</div></a>
+       <a href="https://cristinaahamad.github.io/teamtofu/recipe2.html">
+         <div class="filterDiv Jane John">Meal 2</div></a>
+       <a href="https://cristinaahamad.github.io/teamtofu/recipe3.html">
+         <div class="filterDiv John">Meal 3</div></a>
+       <a href="https://cristinaahamad.github.io/teamtofu/recipe1.html">
+         <div class="filterDiv John Jr">Meal 4</div></a>
+       <a href="https://cristinaahamad.github.io/teamtofu/recipe2.html">
+         <div class="filterDiv Jane John Jr">Meal 5</div></a>
+       <a href="https://cristinaahamad.github.io/teamtofu/recipe3.html">
+         <div class="filterDiv Jane">Meal 6</div>
+       <a href="https://cristinaahamad.github.io/teamtofu/recipe1.html">
+         <div class="filterDiv John Jr">Meal 7</div></a>
+      <a href="https://cristinaahamad.github.io/teamtofu/recipe2.html">
+        <div class="filterDiv Jane Jr">Meal 8</div></a>
+      <a href="https://cristinaahamad.github.io/teamtofu/recipe3.html">
+        <div class="filterDiv Jane John Jr">Meal 9</div></a>
+       <a href="https://cristinaahamad.github.io/teamtofu/recipe1.html">
+         <div class="filterDiv Jane">Meal 10</div></a>
       </div>
 
-      <script>
-      filterSelection("all")
-      function filterSelection(c) {
-        var x, i;
-        x = document.getElementsByClassName("filterDiv");
-        if (c == "all") c = "";
-        for (i = 0; i < x.length; i++) {
-          w3RemoveClass(x[i], "show");
-          if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-        }
-      }
 
-      function w3AddClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-          if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-        }
-      }
-
-      function w3RemoveClass(element, name) {
-        var i, arr1, arr2;
-        arr1 = element.className.split(" ");
-        arr2 = name.split(" ");
-        for (i = 0; i < arr2.length; i++) {
-          while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
-          }
-        }
-        element.className = arr1.join(" ");
-      }
-      </script>
-
+      <script type="text/javascript" src="js/search.js"></script>
   </body>
 </html>
