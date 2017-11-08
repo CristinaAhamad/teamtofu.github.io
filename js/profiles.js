@@ -73,7 +73,7 @@ function addToProfilePage() {
     currentPhoto = "img/jrdo.png";
   }
 
-  $.get("https://cristinaahamad.github.io/teamtofu/profile.html", function () {
+  $.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function () {
     $(".profilespg").append('<img src='+currentPhoto+' style="width:150px;height:140px;border:0;" href="https://cristinaahamad.github.io/teamtofu/profile.html">');
     $(".profilespg").append('a href="https://cristinaahamad.github.io/teamtofu/profile.html"> <font class="prof-name" size="5">'+fullName+'</font>');
     $(".profilespg").append('</a> </br> </br>');
