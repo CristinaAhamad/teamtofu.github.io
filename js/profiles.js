@@ -43,18 +43,18 @@ function showInfo(index) {
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     var person = storedProfiles[index];
 
-    $(document).append('<h1 display="inline" clear="none" id="firstname">'+person[0]+'<h1 display="inline" clear="none" id="lastname">'+ person[1]+ '</h1>');
-    $(document).append('</br> </br> <fieldset> <legend>GENERAL</legend>');
-    $(document).append('<text size="30" id="age"/>'+person[2]+' yrs. old </text></br>');
-    $(document).append('<text size="30" id="sex"/>'+person[3]+'</text></br>');
-    $(document).append('<text size="30" id="weight"/>'+person[4]+'lbs.</text> </br>');
-    $(document).append('<text size="30" id="height-ft"/>'+person[5]+'ft.');
-    $(document).append('<text size="30" id="height-in"/>'+person[6]+'in. </text></text></br>');
-    $(document).append('</fieldset> <fieldset> <legend>PREFERENCES</legend> <div> <h3> Allergies: </h3> <text size="30"/> '+person[7]+' </text></div>');
-    $(document).append('<div> <h3> Health Concerns: </h3> <text size="30"/> '+person[8]+' </text></div>');
-    $(document).append('<div> <h3> Dislikes: </h3><text size="30"/> '+person[9]+' </text></div>');
-    $(document).append('<div> <h3> Likes: </h3><text size="30"/> '+person[10]+' </text></div>');
-    $(document).append('</fieldset>');
+    $(".newprof").append('<h1 display="inline" clear="none" id="firstname">'+person[0]+'<h1 display="inline" clear="none" id="lastname">'+ person[1]+ '</h1>');
+    $(".newprof").append('</br> </br> <fieldset> <legend>GENERAL</legend>');
+    $(".newprof").append('<text size="30" id="age"/>'+person[2]+' yrs. old </text></br>');
+    $(".newprof").append('<text size="30" id="sex"/>'+person[3]+'</text></br>');
+    $(".newprof").append('<text size="30" id="weight"/>'+person[4]+'lbs.</text> </br>');
+    $(".newprof").append('<text size="30" id="height-ft"/>'+person[5]+'ft.');
+    $(".newprof").append('<text size="30" id="height-in"/>'+person[6]+'in. </text></text></br>');
+    $(".newprof").append('</fieldset> <fieldset> <legend>PREFERENCES</legend> <div> <h3> Allergies: </h3> <text size="30"/> '+person[7]+' </text></div>');
+    $(".newprof").append('<div> <h3> Health Concerns: </h3> <text size="30"/> '+person[8]+' </text></div>');
+    $(".newprof").append('<div> <h3> Dislikes: </h3><text size="30"/> '+person[9]+' </text></div>');
+    $(".newprof").append('<div> <h3> Likes: </h3><text size="30"/> '+person[10]+' </text></div>');
+    $(".newprof").append('</fieldset>');
 };
 
 
