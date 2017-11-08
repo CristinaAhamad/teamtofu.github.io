@@ -1,6 +1,3 @@
-$( document ).ready(function(){
-});
-
 function getFormInfo() {
   //if there isn't an array yet, make one
   if (localStorage.length == 0) {
