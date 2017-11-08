@@ -42,6 +42,7 @@ function showInfo() {
 
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     var person = storedProfiles[storedProfiles.length-1];
+    console.log(person);
 
     $(".newprof").append('<h1 display="inline" clear="none" id="firstname">'+person[0]+'<h1 display="inline" clear="none" id="lastname">'+ person[1]+ '</h1>');
     $(".newprof").append('</br> </br> <fieldset> <legend>GENERAL</legend>');
