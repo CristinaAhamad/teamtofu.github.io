@@ -23,24 +23,24 @@ $( document ).ready(function getFormInfo() {
       aArray.push(id);
     }
   });
-
   console.log(aArray);
   entry.push(aArray);
 
   var hArray = [];
-      health.push($(".health").val());
+      hArray.push($(".health").val());
   entry.push(hArray);
 
   var dArray = [];
-      dislikes.push($(".dislikes").val());
+      dArray.push($(".dislikes").val());
   entry.push(dArray);
 
   var lArray =[];
-      likes.push($(".likes").val());
+      lArray.push($(".likes").val());
   entry.push(lArray);
 
   localStorage.length = arrayOfProfiles.length;
   console.log(entry);
+
   arrayOfProfiles.push(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
   addToProfilePage();
@@ -84,7 +84,7 @@ function addToProfilePage() {
   }
 
     $(".profilespg").append('<img src='+currentPhoto+' style="width:150px;height:140px;border:0;" href="http://cristinaahamad.github.io/teamtofu/profile.html">');
-    $(".profilespg").append('a href="http://cristinaahamad.github.io/teamtofu/jr-doe.html"> <font class="prof-name" size="5">'+fullName+'</font>');
+    $(".profilespg").append('a href="http://cristinaahamad.github.io/teamtofu/profile.html"> <font class="prof-name" size="5">'+fullName+'</font>');
     $(".profilespg").append('</a> </br> </br>');
 
 };
