@@ -1,0 +1,17 @@
+img.icon {
+    background: #ffc0c0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 30px;
+}
+
+/* links */
+a {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
