@@ -39,7 +39,7 @@ function getFormInfo() {
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
 
   addToProfilePage();
-});
+};
 
 
 function showInfo(index) {
