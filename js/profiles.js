@@ -17,13 +17,7 @@ $( document ).ready(function getFormInfo() {
 
   //Create individual arrays to save Preferences
   var aArray = [];
-  $(".allergies").each(function() {
-    var id = $(this).attr(id);
-    if(id != undefined) {
-      aArray.push(id);
-    }
-  });
-  console.log(aArray);
+    aArray.push($(".allergies").val());
   entry.push(aArray);
 
   var hArray = [];
@@ -39,7 +33,6 @@ $( document ).ready(function getFormInfo() {
   entry.push(lArray);
 
   localStorage.length = arrayOfProfiles.length;
-  console.log(entry);
 
   arrayOfProfiles.push(entry);
   localStorage.setItem("profiles-list", JSON.stringify(arrayOfProfiles));
