@@ -2,9 +2,16 @@ function getFormInfo() {
   //if there isn't an array yet, make one
   if (localStorage.length == 0) {
     var arrayOfProfiles = [];
-    janeLikes = ['Black Beans', 'Cauliflower'].
-    arrayOfProfiles = {'firsname': 'Jane', 'lastname': 'Doe', 'age': '47', 'sex': 'Female', 'weight:': '130', 'height-ft': '5',
-      'height-in': '4', 'allergies':'', 'health':'', 'dislikes':'', 'likes': janeLikes }
+    janeLikes = ['Black Beans', 'Cauliflower'];
+    johnHealth = ['Vegetarian'];
+    johnDislikes = ['Cauliflower'];
+    johnLikes = ['Quinoa'];
+    arrayOfProfiles = [
+      {'firsname': 'Jane', 'lastname': 'Doe', 'age': '47', 'sex': 'Female', 'weight:': '130', 'height-ft': '5',
+      'height-in': '4', 'allergies':'', 'health':'', 'dislikes':'', 'likes': janeLikes },
+      {'firsname': 'John', 'lastname': 'Doe', 'age': '50', 'sex': 'Male', 'weight:': '170', 'height-ft': '5',
+        'height-in': '11', 'allergies':'', 'health':johnHealth, 'dislikes':johnDislikes, 'likes': johnLikes}
+      ]
   } else {
     var arrayOfProfiles = JSON.parse(localStorage.getItem("profiles-list"));
   }
@@ -106,15 +113,9 @@ function addToProfilePage() {
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  var currentPhoto = person[11];
+  var currentPhoto = "img/jrdo.png";
 
-  //if no profile photo, default
-  if(!currentPhoto) {
-    currentPhoto = "img/jrdo.png";
-  }
-
-  $("#profilespg").append('<img src='+currentPhoto+' style="width:150px;height:140px;border:0;" href="https://cristinaahamad.github.io/teamtofu/profile.html">');
-  $("#profilespg").append('a href="https://cristinaahamad.github.io/teamtofu/profile.html"> <font class="prof-name" size="5">'+fullName+'</font>');
-  $("#profilespg").append('</a> </br> </br>');
+  $(".profilespg").append('<img src='+currentPhoto+' style="width:150px;height:140px;border:0;" href="https://cristinaahamad.github.io/teamtofu/profile.html">');
+  $(".profilespg").append('a href="https://cristinaahamad.github.io/teamtofu/profile.html"> <font class="prof-name" size="5">'+fullName+'</font></a> </br> </br>');
 
 };
