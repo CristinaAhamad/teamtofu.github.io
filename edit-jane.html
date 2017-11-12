@@ -9,6 +9,64 @@
         <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
       </form>
       <h1> Jane Doe </h1></br>
-      <a href="http://cristinaahamad.github.io/teamtofu/profiles-page.html">Accept</a> </br>
+      <body>
+        <form>
+          <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
+        </form>
+        <h1> Edit</h1></br>
+        <form id="profile-form" action="" method="get">
+          <fieldset>
+            <legend>GENERAL</legend>
+          <input type="text" size="30" id="firstname" value="Jane" required></input> </br>
+          <input type="text" size="30" id="lastname" value="Doe" ></input> </br>
+          <input type="number" id="age" value="47" min="1" max="100"> yrs. old</input> </br>
+          <select value="Female" id="sex" name="Sex">
+              <option value=" " disabled selected hidden>Enter Sex</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Decline to State">Decline to State</option>
+          </select> </br>
+          <input type="number" value ="130" id="weight" min="1" max="500"> lbs.</input> </br>
+          <input type="number" value="5" id="height-ft" min="0" max="8"> ft.
+          <input type="number" value="4" id="height-in" min="0" max="11"> in. </input></br>
+        </fieldset>
+      </br>
+        <fieldset>
+          <legend>PREFERENCES</legend>
+
+          Allergies:
+          <div class="input_fields_wrap1">
+            <button class="add_field_button1">Add Another</button>
+            <div><input type="text" class="allergies" size="30" name="mytext[]" placeholder="Peanuts, etc."></div>
+          </div> </br>
+
+          Health Concerns:
+          <div class="input_fields_wrap2">
+            <button class="add_field_button2">Add Another</button>
+            <div><input type="text" class="health" size="30" name="mytext[]" placeholder="Diabetes, etc."></div>
+          </div> </br>
+
+          Dislikes:
+          <div class="input_fields_wrap3">
+            <button class="add_field_button3">Add Another</button>
+            <div><input type="text" class="dislikes" size="30" name="mytext[]"></div>
+          </div> </br>
+
+          Likes:
+          <div class="input_fields_wrap4">
+            <button class="add_field_button4">Add Another</button>
+            <div><input type="text" class="likes" size="30" value="Black Beans" name="mytext[]"></div>
+            <input type="text" class="likes" size="30" value="Cauliflower" name="mytext[]"></div>
+          </div> </br>
+
+          <div> Add Profile Photo (optional): </div>
+          <input type="file" id="prof-photo"> </br> </br>
+
+          <input type="submit" id="submit" class="addbutton" value=&#10004 onclick="updateProfileInfo(0);window.location.href='https://cristinaahamad.github.io/teamtofu/profiles-page.html'">
+          <a onclick="updateProfileInfo(0);window.location.href='https://cristinaahamad.github.io/teamtofu/profiles-page.html'" size="6">  ACCEPT</a></input></br>
+        </form>
+
+        <script src="js/profiles.js"></script>
+        <script src="js/main.js"></script>
     </body>
   </html>
