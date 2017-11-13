@@ -72,3 +72,13 @@ legend {
 .show {
   visibility: visible;
 }
+
+input {
+    border: 1px solid grey;
+    border-radius: 2px;
+}
+
+button[class=add_field_button1],[class=add_field_button2],[class=add_field_button3],[class=add_field_button4] {
+    border-radius: 5px;
+    margin: 4px 2px;
+}
