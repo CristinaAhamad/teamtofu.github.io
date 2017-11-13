@@ -13,8 +13,12 @@ html *
    vertical-align: middle;
 }
 
+body {
+  vertical-align: middle;
+}
+
 .addbutton {
-    background-color: #008CBA;
+    background-color: #bbd19a;
     border: none;
     color: white;
     text-align: center;

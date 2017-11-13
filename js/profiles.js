@@ -100,6 +100,6 @@ function addToProfilePage() {
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  $(".profilespg").append('<div onclick="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:150px;height:140px;border:0;"> <font class="prof-name" size="5">' fullName'</font> </div>');
+  $(".profilespg").append('<div onclick="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">' fullName'</font> </div>');
 
 };
