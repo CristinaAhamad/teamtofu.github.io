@@ -7,17 +7,18 @@
       <meta name=viewport content="width=device-width, initial-scale=1">
     </head>
     <body>
-      <form>
-        <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
-      </form>
+      <div class="navbar">
+        <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+      </div> </br> </br>
       <h1> New Profile </h1></br>
       <form id="profile-form" action="" method="get">
-        <fieldset>
-          <legend>GENERAL</legend>
+        <div class="titlebar">
+          <text>GENERAL</text>
+        </div>
         <input type="text" size="30" id="firstname" placeholder="First Name" required></input> </br>
         <input type="text" size="30" id="lastname" placeholder="Last Name"></input> </br>
         <input type="number" id="age" min="1" max="100"> yrs. old</input> </br>
-        <select  id="sex" name="Sex">
+        <select id="sex" name="Sex">
             <option value=" " disabled selected hidden>Enter Sex</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -26,10 +27,10 @@
         <input type="number" id="weight" min="1" max="500"> lbs.</input> </br>
         <input type="number" id="height-ft" min="0" max="8"> ft.
         <input type="number" id="height-in" min="0" max="11"> in. </input></br>
-      </fieldset>
-    </br>
-      <fieldset>
-        <legend> PREFERENCES </legend>
+
+    <div class="titlebar" style="background-color:#2f8c66;">
+      <text>PREFERENCES</text>
+    </div>
 
         Allergies to Certain Ingredients:
         <div class="input_fields_wrap1">
