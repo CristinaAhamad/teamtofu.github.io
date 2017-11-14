@@ -2,31 +2,27 @@
 <html lang="en">
     <head>
       <link href="css/main.css" rel="stylesheet">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <meta name=viewport content="width=device-width, initial-scale=1">
       <title> Jane Doe </title>
     </head>
     <body>
-      <div class="navbar">
-        <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
-        <input class="edit" style="float:right" value=&#9998 onclick="location.href='https://cristinaahamad.github.io/teamtofu/edit-jane.html'"/></input>
-      </div> </br> </br> </br>
-      <h1 display="inline" clear="none" class="jane-first" id="firstname"> Jane
-      <h1 display="inline" clear="none" class="jane-last"id="lastname"> Doe </h1>
+      <form>
+        <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
+      </form>
+      <a float="right" href="https://cristinaahamad.github.io/teamtofu/edit-jane.html">Edit</a> </br>
+      <h1 display="inline" clear="none" id="firstname"> Jane
+      <h1 display="inline" clear="none" id="lastname"> Doe </h1>
       </br>
       </br>
-      <div class="titlebar">
-        <text>GENERAL</text>
-      </div>
-      <text size="30" class="jane-age" id="age"/>47 yrs. old </text></br>
-      <text size="30" class="jane-sex" id="sex"/>Female </text></br>
-      <text size="30" class="jane-weight" id="weight"/> 130 lbs.</text> </br>
-      <text size="30" class="jane-height-ft" id="height-ft"/> 5 ft.
-      <text size="30" class="jane-height-in" id="height-in"/> 4 in. </text></text></br>
-    </br> </br>
-    <div class="titlebar" style="background-color:#2f8c66;">
-      <text>PREFERENCES</text>
-    </div>
+      <fieldset>
+        <legend>GENERAL</legend>
+      <text size="30" id="age"/>47 yrs. old </text></br>
+      <text size="30" id="sex"/>Female </text></br>
+      <text size="30" id="weight"/> 130 lbs.</text> </br>
+      <text size="30" id="height-ft"/> 5 ft.
+      <text size="30" id="height-in"/> 4 in. </text></text></br>
+    </fieldset>
+    <fieldset>
+      <legend>PREFERENCES</legend>
       <div>
         <h3> Allergies: </h3>
         <text size="30"/> </text>
@@ -41,10 +37,9 @@
       </div>
       <div>
         <h3> Likes: </h3>
-        <text class="jane-like1" size="30"/> Black Beans </text> </br>
-        <text class="jane-like2" size="30"/> Cauliflower </text>
+        <text size="30"/> Black Beans </text> </br>
+        <text size="30"/> Cauliflower </text>
       </div>
-    <script src="js/profiles.js"></script>
-    <script src="js/main.js"></script>
+    </fieldset>
     </body>
   </html>
