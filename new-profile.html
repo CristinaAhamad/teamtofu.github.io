@@ -10,10 +10,10 @@
       <div class="navbar">
         <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
       </div> </br> </br>
-      <h1> New Profile </h1></br>
+      <h1> New Profile </h1>
       <form id="profile-form" action="" method="get">
-        <div class="titlebar">
-          <text>GENERAL</text>
+        <div margin-top=0px class="titlebar">
+          <h2>General</h2>
         </div>
         <input type="text" size="30" id="firstname" placeholder="First Name" required></input> </br>
         <input type="text" size="30" id="lastname" placeholder="Last Name"></input> </br>
@@ -26,10 +26,10 @@
         </select> </br>
         <input type="number" id="weight" min="1" max="500"> lbs.</input> </br>
         <input type="number" id="height-ft" min="0" max="8"> ft.
-        <input type="number" id="height-in" min="0" max="11"> in. </input></br>
+        <input type="number" id="height-in" min="0" max="11"> in. </input>
 
     <div class="titlebar" style="background-color:#2f8c66;">
-      <text>PREFERENCES</text>
+      <h2>Preferences</h2>
     </div>
 
         Allergies to Certain Ingredients:
@@ -55,9 +55,9 @@
         <div> Add Profile Photo (optional): </div>
         <input type="file" id="prof-photo"> </br> </br>
 
-        <a style="display:block" onclick="getFormInfo();addToProfilePage();'https://cristinaahamad.github.io/teamtofu/profiles-page.html'">
-          <input type="submit" id="submit" class="addbutton" value=&#10004>
-          <font size="5">  SUBMIT</font></input>
+        <a style="display:block" onclick="getFormInfo();addToProfilePage();">
+          <button style="display: inline" class="addbutton" value=&#10004>
+          <font style="display: inline;background-color:inheirt; color:black;" size="5">  SUBMIT</font></button>
         </a>
 
       </form>

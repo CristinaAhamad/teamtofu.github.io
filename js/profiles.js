@@ -3,11 +3,9 @@ function getFormInfo() {
   if (localStorage.length == 0) {
     var arrayOfProfiles = [];
     arrayOfProfiles = [
-      {'firsname': 'Jane', 'lastname': 'Doe', 'age': '47', 'sex': 'Female', 'weight:': '130', 'height-ft': '5',
-      'height-in': '4', 'allergies':'', 'health':'', 'dislikes':'', 'likes': ['Black Beans', 'Cauliflower'] },
-      {'firsname': 'John', 'lastname': 'Doe', 'age': '50', 'sex': 'Male', 'weight:': '170', 'height-ft': '5',
-        'height-in': '11', 'allergies':'', 'health':['Vegetarian'], 'dislikes':['Cauliflower'], 'likes': ['Quinoa']}
-      ]
+      ['Jane','Doe','47','Female','130','5','4','[]','[]','[]', '["Black Beans", "Cauliflower"]' ],
+      ['John','Doe','50','Male','170','5','11','[]','["Vegetarian"]','["Cauliflower"]', '["Quinoa"]' ]
+    ]
   } else {
     var arrayOfProfiles = JSON.parse(localStorage.getItem("profiles-list"));
   }
@@ -51,8 +49,12 @@ function showInfo() {
     var person = storedProfiles[storedProfiles.length-1];
 
     $(".newprof").append('<h1 display="inline" clear="none" id="firstname">'+person[0]+'<h1 display="inline" clear="none" id="lastname">'+" "+person[1]+ '</h1>');
-    $(".newprof").append('</br> </br> <fieldset> <legend>GENERAL</legend><text size="30" id="age"/>'+person[2]+' yrs. old </text></br> <text size="30" id="sex"/>'+person[3]+'</text></br> <text size="30" id="weight"/>'+person[4]+' lbs.</text> </br> <text size="30" id="height-ft"/>'+person[5]+' ft. <text size="30" id="height-in"/>'+person[6]+' in. </text></text> </fieldset></br></br>');
-    $(".newprof").append('<fieldset><legend>PREFERENCES</legend> <div> <h3> Allergies: </h3> <text size="30"/> '+person[7]+' </text></div> <div> <h3> Health Concerns: </h3> <text size="30"/> '+person[8]+' </text></div> <div> <h3> Dislikes: </h3><text size="30"/> '+person[9]+' </text></div> <div> <h3> Likes: </h3><text size="30"/> '+person[10]+' </text></div> </fieldset>');
+    $(".newprof").append('<div class="titlebar"> <h2>General</h2> </div><text size="30" id="age"/>'+person[2]+' yrs. old </text></br>');
+    $(".newprof").append('<text size="30" id="sex"/>'+person[3]+'</text></br> <text size="30" id="weight"/>'+person[4]+' lbs.</text></br>');
+    $(".newprof").append('<text size="30" id="height-ft"/>'+person[5]+' ft. <text size="30" id="height-in"/>'+person[6]+' in. </text></text></br>');
+    $(".newprof").append('<div class="titlebar" style="background-color:#2f8c66;"><h2>Preferences</h2></div> <div> <h3> Allergies: </h3> <text size="30"/> '+person[7]+' </text>');
+    $(".newprof").append('</div> <div> <h3> Health Concerns: </h3> <text size="30"/> '+person[8]+' </text></div> <div> <h3> Dislikes: </h3><text size="30"/> '+person[9]+' </text></div>');
+    $(".newprof").append('<div> <h3> Likes: </h3><text size="30"/> '+person[10]+' </text></div>');
 };
 
 function updateProfileInfo(num) {
@@ -94,12 +96,14 @@ function addToProfilePage() {
   console.log("add prof");
   //dynamically add profile photo and name to profiles page
   var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
+  console.log(storedProfiles.length - 1);
   var person = storedProfiles[storedProfiles.length - 1]; //get newly added profile
 
   var currentFirst = person[0];
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  $(".profilespg").append('<div onclick="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </div>');
+  $("#profilespg").append('<a style="display:block" href="/Users/tinaahamad/Desktop/CSE170 Project/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
 
+  window.location ="/Users/tinaahamad/Desktop/CSE170 Project/teamtofu/profiles-page.html";
 };
