@@ -2,14 +2,15 @@
 <html lang="en">
     <head>
       <link href="css/main.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <meta name=viewport content="width=device-width, initial-scale=1">
       <title> John Doe </title>
     </head>
     <body>
-      <form>
-        <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
-      </form>
-      <a href="http://cristinaahamad.github.io/teamtofu/edit-john.html">Edit</a> </br>
+      <div class="navbar">
+        <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+        <input class="edit" style="float:right" value=&#9998 onclick="location.href='https://cristinaahamad.github.io/teamtofu/edit-john.html'"/></input>
+      </div> </br> </br>
       <h1 display="inline" clear="none" id="firstname"> John
       <h1 display="inline" clear="none" id="lastname"> Doe </h1>
       </br>
@@ -21,7 +22,7 @@
       <text size="30" id="weight"/> 170 lbs.</text> </br>
       <text size="30" id="height-ft"/> 5 ft.
       <text size="30" id="height-in"/> 11 in. </text></text></br>
-    </fieldset>
+    </fieldset> </br> </br>
     <fieldset>
       <legend>PREFERENCES</legend>
       <div>
@@ -41,5 +42,7 @@
         <text size="30"/> Quinoa </text>
       </div>
     </fieldset>
+    <script src="js/profiles.js"></script>
+    <script src="js/main.js"></script>
     </body>
   </html>

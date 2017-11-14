@@ -4,19 +4,21 @@
       <title> New Profile </title>
       <link href="css/main.css" rel="stylesheet">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <meta name=viewport content="width=device-width, initial-scale=1">
     </head>
     <body>
-      <form>
-        <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
-      </form>
+      <div class="navbar">
+        <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+      </div> </br> </br>
       <h1> New Profile </h1></br>
       <form id="profile-form" action="" method="get">
-        <fieldset>
-          <legend>GENERAL</legend>
+        <div class="titlebar">
+          <text>GENERAL</text>
+        </div>
         <input type="text" size="30" id="firstname" placeholder="First Name" required></input> </br>
         <input type="text" size="30" id="lastname" placeholder="Last Name"></input> </br>
         <input type="number" id="age" min="1" max="100"> yrs. old</input> </br>
-        <select  id="sex" name="Sex">
+        <select id="sex" name="Sex">
             <option value=" " disabled selected hidden>Enter Sex</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -25,41 +27,39 @@
         <input type="number" id="weight" min="1" max="500"> lbs.</input> </br>
         <input type="number" id="height-ft" min="0" max="8"> ft.
         <input type="number" id="height-in" min="0" max="11"> in. </input></br>
-      </fieldset>
-    </br>
-      <fieldset>
-        <legend>PREFERENCES</legend>
 
-        Allergies:
+    <div class="titlebar" style="background-color:#2f8c66;">
+      <text>PREFERENCES</text>
+    </div>
+
+        Allergies to Certain Ingredients:
         <div class="input_fields_wrap1">
-          <button class="add_field_button1">Add Another</button>
           <div><input type="text" class="allergies" size="30" name="mytext[]" placeholder="Peanuts, etc."></div>
-        </div> </br>
+        </div> <button class="add_field_button1">Add Another Allergy</button> </br>
 
         Health Concerns:
         <div class="input_fields_wrap2">
-          <button class="add_field_button2">Add Another</button>
           <div><input type="text" class="health" size="30" name="mytext[]" placeholder="Diabetes, etc."></div>
-        </div> </br>
+        </div> <button class="add_field_button2">Add Another Concern</button> </br>
 
-        Dislikes:
+        Disliked Ingredients:
         <div class="input_fields_wrap3">
-          <button class="add_field_button3">Add Another</button>
           <div><input type="text" class="dislikes" size="30" name="mytext[]"></div>
-        </div> </br>
+        </div> <button class="add_field_button3">Add Another Dislike</button> </br>
 
-        Likes:
+        Liked Ingredients:
         <div class="input_fields_wrap4">
-          <button class="add_field_button4">Add Another</button>
           <div><input type="text" class="likes" size="30" name="mytext[]"></div>
-        </div> </br>
+        </div> <button class="add_field_button4">Add Another Like</button> </br>
 
         <div> Add Profile Photo (optional): </div>
         <input type="file" id="prof-photo"> </br> </br>
 
-        <input type="submit" id="submit" class="addbutton" value=&#10004
-          onclick="getFormInfo();addToProfilePage();window.location.href='https://cristinaahamad.github.io/teamtofu/profiles-page.html'">
-        <a onclick="getFormInfo();window.location.href='https://cristinaahamad.github.io/teamtofu/profiles-page.html'" size="6">  SUBMIT</a></input></br>
+        <a style="display:block" onclick="getFormInfo();addToProfilePage();'https://cristinaahamad.github.io/teamtofu/profiles-page.html'">
+          <input type="submit" id="submit" class="addbutton" value=&#10004>
+          <font size="5">  SUBMIT</font></input>
+        </a>
+
       </form>
 
       <script src="js/profiles.js"></script>

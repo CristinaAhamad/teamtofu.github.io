@@ -3,12 +3,69 @@
     <head>
       <title> Jane Doe </title>
      <link href="css/main.css" rel="stylesheet">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+     <meta name=viewport content="width=device-width, initial-scale=1">
     </head>
     <body>
-      <form>
-        <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
-      </form>
-      <h1> Jane Doe </h1></br>
-      <a href="http://cristinaahamad.github.io/teamtofu/profiles-page.html">Accept</a> </br>
+      <div class="navbar">
+        <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+      </div> </br> </br>
+      <body>
+        <h1> Edit</h1></br>
+        <form id="profile-form" action="" method="get">
+          <div class="titlebar">
+            <text>GENERAL</text>
+          </div>
+          <input type="text" size="30" id="firstname" value="Jane" required></input> </br>
+          <input type="text" size="30" id="lastname" value="Doe" ></input> </br>
+          <input type="number" id="age" value="47" min="1" max="100"> yrs. old</input> </br>
+          <select value="Female" id="sex" name="Sex">
+              <option value=" " disabled selected hidden>Enter Sex</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Decline to State">Decline to State</option>
+          </select> </br>
+          <input type="number" value ="130" id="weight" min="1" max="500"> lbs.</input> </br>
+          <input type="number" value="5" id="height-ft" min="0" max="8"> ft.
+          <input type="number" value="4" id="height-in" min="0" max="11"> in. </input></br>
+      <div class="titlebar" style="background-color:#2f8c66;">
+        <text>PREFERENCES</text>
+      </div>
+
+          Allergies:
+          <div class="input_fields_wrap1">
+            <div><input type="text" class="allergies" size="30" name="mytext[]" placeholder="Peanuts, etc."></div>
+          </div>
+            <button class="add_field_button1">Add Another</button> </br>
+
+          Health Concerns:
+          <div class="input_fields_wrap2">
+            <div><input type="text" class="health" size="30" name="mytext[]" placeholder="Diabetes, etc."></div>
+          </div>
+            <button class="add_field_button2">Add Another</button> </br>
+
+          Dislikes:
+          <div class="input_fields_wrap3">
+            <div><input type="text" class="dislikes" size="30" name="mytext[]"></div>
+          </div>
+            <button class="add_field_button3">Add Another</button> </br>
+
+          Likes:
+          <div class="input_fields_wrap4">
+            <div><input type="text" class="likes" size="30" value="Black Beans" name="mytext[]"></div>
+            <input type="text" class="likes" size="30" value="Cauliflower" name="mytext[]"></div>
+          </div>
+            <button class="add_field_button4">Add Another</button> </br>
+
+          <div> Add Profile Photo (optional): </div>
+          <input type="file" id="prof-photo"> </br> </br>
+
+          <a style="display:block" onclick="updateProfileInfo(0);'https://cristinaahamad.github.io/teamtofu/profiles-page.html'">
+            <input type="submit" id="submit" class="addbutton" value=&#10004>
+            <font size="4">  ACCEPT</font></input>
+          </a>
+
+        <script src="js/profiles.js"></script>
+        <script src="js/main.js"></script>
     </body>
   </html>
