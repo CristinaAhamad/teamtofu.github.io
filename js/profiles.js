@@ -125,3 +125,27 @@ function addToProfilePage() {
 
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 };
+
+function deleteProfile(num) {
+  var txt;
+  if (num == 0){
+    if (confirm("Are you sure you want\nto delete this profile?") == true) {
+       txt = "Deleted!";
+       $("#profjane").remove();
+    } else {
+       txt = "Your profile remains unchanged."
+    }
+  }
+  if (num == 1){
+    if (confirm("Are you sure you want\nto delete this profile?") == true) {
+       txt = "Deleted!";
+       $("#profjane").remove();
+    } else {
+       txt = "Your profile remains unchanged."
+    }
+  }
+
+  document.getElementById("demo").innerHTML = txt;
+
+  window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html"
+};
