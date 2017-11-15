@@ -82,6 +82,9 @@ function updateProfileInfo(num) {
     person[9] = ($(".dislikes").val());
     person[10] = ($(".likes").val());
 
+    console.log(person[1]);
+    console.log(person[10]);
+
     window.location='https://cristinaahamad.github.io/teamtofu/profiles-page.html';
 };
 
@@ -106,7 +109,6 @@ function addToProfilePage() {
   console.log("add prof");
   //dynamically add profile photo and name to profiles page
   var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
-  console.log(storedProfiles.length - 1);
   var person = storedProfiles[storedProfiles.length - 1]; //get newly added profile
 
   var currentFirst = person[0];
