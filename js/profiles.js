@@ -23,7 +23,7 @@ function getFormInfo() {
   var aArray = [];
   $("#allergies").each(function() {
     aArray.push($(this).val());
-  }); 
+  });
   entry.push(aArray);
 
   var hArray = [];
@@ -105,7 +105,10 @@ function addToProfilePage() {
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  $("#profilespg").append('<a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
+  function(e) {
+    $("#profilespg").append('<a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
+    e.preventDefault();
+  });
 
   window.location ="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 };
