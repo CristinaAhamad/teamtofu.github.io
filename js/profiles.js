@@ -162,8 +162,6 @@ function addToProfilePage() {
   var fullName = currentFirst+" "+currentLast;
   var currentPhoto="img/jrdo.png";
 
-  $("#newprof").append('<img src='+currentPhoto+' style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
-
   /*$.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function(data) {
     $(".profilepage").append(data); }
 
@@ -171,6 +169,8 @@ function addToProfilePage() {
   */
 
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
+
+  $("#newprof").append('<img src='+currentPhoto+' style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
 };
 
 function deleteProfile(num) {
