@@ -70,13 +70,13 @@ function updateProfileInfo(num) {
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     var person = storedProfiles[num];
 
-    person[0] = $("#firstname").val();
-    person[1] = $("#lastname").val();
-    person[2] = $("#age").val();
-    person[3] = ($("#sex").val());
-    person[4] = ($("#weight").val());
-    person[5] = ($("#height-ft").val());
-    person[6] = ($("#height-in").val());
+    person[0] = $(".firstname").val();
+    person[1] = $(".lastname").val();
+    person[2] = $(".age").val();
+    person[3] = ($(".sex").val());
+    person[4] = ($(".weight").val());
+    person[5] = ($(".height-ft").val());
+    person[6] = ($(".height-in").val());
 
     var aArray = [];
     $(".allergies").each(function() {
@@ -117,7 +117,7 @@ function updateProfile(num) {
   var person = storedProfiles[num];
 
   for (i=0; i < 11; i++) {
-      if (person[i] == null) {
+      if (!person[i]) {
         person[i] = " ";
       }
   }
