@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Recipe 5</title>
+      <link href="css/main.css" rel="stylesheet">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+<!--Custom CSS-->
+      <link rel="stylesheet" href="css/recipe.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+    </div> </br> </br>
+<!--Header-->
+<div>
+  <h1>Turkey Veggie Meatloaf Cups</h1>
+</div>
+  <img class="header" src="img/recipe5.jpg">
+<!--Tags-->
+  <div>
+    <meta http-equiv="vegan" content="5;url=https://cristinaahamad.github.io/teamtofu/searchrecipes.html">
+  </div>
+<!--Tabs-->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Description')">Description</button>
+      <button class="tablinks" onclick="openTab(event, 'Ingredients')">Ingredients</button>
+      <button class="tablinks" onclick="openTab(event, 'Recipe')">Recipe</button>
+      <button class="tablinks" onclick="openTab(event, 'Reviews')">Reviews</button>
+    </div>
+<!--Tab Content-->
+
+    <div id="Description" class="tabcontent">
+      <h2>Description</h2>
+      <p>Low carb, high protein recipe that will triumph any red meat recipe.</p>
+    </div>
+    <div id="Ingredients" class="tabcontent">
+      <h2>Ingredients</h2>
+      <ul>
+        <li id="ingredients oil">2 cups coarsely chopped zucchini</li>
+        <li id="ingredients onion">1 1/2 cups coarsely chopped onions</li>
+        <li id="ingredients garlic">1 red bell pepper, coarsely chopped</li>
+        <li id="ingredients quinoa">1 pound extra lean ground turkey</li>
+        <li id="ingredients vegetable broth">1/2 cup uncooked couscous</li>
+        <li id="ingredients cumin">1 egg</li>
+        <li id="ingredients cumin">2 tablespoons Worcestershire sauce</li>
+        <li id="ingredients cumin">1 tablespoon Dijon mustard</li>
+        <li id="ingredients cumin">1/2 cup barbecue sauce, or as needed</li>
+      </ul>
+      <a style="display:block" onclick="getIngredients();addToMyShoppingList();'https://cristinaahamad.github.io/teamtofu/shopping-list.html'">
+        <button id="Save-ingredients" class="Save-Ingredients-Button" type="button"><big>Save Ingredients</big></button>
+      <script src="js/save-ingredients.js"></script>
+    </div>
+    <div id="Recipe" class="tabcontent">
+      <h2>Recipe</h2>
+      <ol>
+        <li>Preheat oven to 400 degrees F (200 degrees C). Spray 20 muffin cups with cooking spray.</li>
+        <li>Place zucchini, onions, and red bell pepper into a food processor, and pulse
+          several times until finely chopped but not liquefied. Place the vegetables into a bowl,
+          and mix in ground turkey, couscous, egg, Worcestershire sauce, and Dijon mustard until
+          thoroughly combined. Fill each prepared muffin cup about 3/4 full. Top each cup with about
+          1 teaspoon of barbecue sauce.</li>
+        <li>Bake in the preheated oven until juices run clear, about 25 minutes. Internal
+          temperature of a muffin measured by an instant-read meat thermometer should be at
+          least 160 degrees F (70 degrees C). Let stand 5 minutes before serving.</li>
+      </ol>
+    </div>
+    <div id="Reviews" class="tabcontent">
+      <h2>Reviews</h2>
+      <p>"This super-delicious and incredibly easy recipe has become one of my
+        absolute favorites. I pass it on to everyone I know, and they all rave about it too!"</p>
+    </div>
+
+    <a href="https://cristinaahamad.github.io/teamtofu/review.html">Add Review</a><br>
+    <a href="https://cristinaahamad.github.io/teamtofu/myrecipes.html">Save Recipe</a>
+
+<!--Custom JavaScript-->
+    <script type="text/javascript" src="js/recipe.js"></script>
+
+  </body>
+</html>
