@@ -86,7 +86,7 @@ function updateProfileInfo(num) {
     console.log(person[10]);
 
     storedProfiles[num] = person;
-    localStorage.setItem("profiles-list", JSON.stringify(storedProfiles);
+    localStorage.setItem("profiles-list", JSON.stringify(storedProfiles));
 
     window.location='history.back()';
 };
