@@ -85,7 +85,7 @@ function updateProfileInfo(num) {
     console.log(person[1]);
     console.log(person[10]);
 
-    window.location='https://cristinaahamad.github.io/teamtofu/profiles-page.html';
+    window.location='history.back()';
 };
 
 function updateProfile(num) {
