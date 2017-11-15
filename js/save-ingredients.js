@@ -25,7 +25,7 @@ function showInfo() {
     var storedIngredients = JSON.parse(localStorage.getItem("ingredients-list"));
     var food = storedIngredients[storedIngredients.length-1];
 
-    $(".newprof").append('<h1 display="inline" clear="none" id="ingrdients">'+person[0];
+    $(".newprof").append('<h1 display="inline" clear="none" id="ingrdients">'+person[0]);
 
 function updateShoppingList(num) {
 
