@@ -185,3 +185,18 @@ button[class=add_field_button1],[class=add_field_button2],[class=add_field_butto
   color:white;
   border-radius: 20%;
 }
+
+.Save-Ingredients-Button{
+  border-color: #2f8c66;
+  border-style: outset;
+  background-color:#2f8c66;
+  padding:3px;
+  padding-left:10px;
+  padding-right: 10px;
+  color:white;
+  border-radius: 20%;
+}
+
+big {
+  background-color: inherit;
+}
