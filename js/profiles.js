@@ -142,8 +142,9 @@ function addToProfilePage() {
   var currentFirst = person[0];
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
+  var currentPhoto="img/jrdo.png";
 
-  $("#newprof").append('<img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
+  $("#newprof").append('<img src='+currentPhoto+' style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
 
   /*$.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function(data) {
     $(".profilepage").append(data); }
