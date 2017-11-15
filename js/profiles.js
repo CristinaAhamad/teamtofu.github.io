@@ -70,7 +70,7 @@ function updateProfileInfo(num) {
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
     var person = storedProfiles[num];
 
-    person[0] = $(".firstname").val();
+    person[0] = $(".firstname").val() + " ";
     person[1] = $(".lastname").val();
     person[2] = $(".age").val();
     person[3] = ($(".sex").val());
@@ -164,15 +164,13 @@ function addToProfilePage() {
   var fullName = currentFirst+" "+currentLast;
   var currentPhoto="img/jrdo.png";
 
-  /*$.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function(data) {
-    $(".profilepage").append(data); }
-
-  document.getElementById("profilespg").innerHTML += data;
+  /*
+  <img src='+currentPhoto+' style="width:37%;height:37%;border:0;">
   */
 
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 
-  $("#newprof").append('<img src='+currentPhoto+' style="width:37%;height:37%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
+  $("#newprof").append('<font class="prof-name" size="5">'+ fullName+'</font> </a>');
   return false;
 };
 
