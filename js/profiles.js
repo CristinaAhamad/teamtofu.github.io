@@ -77,18 +77,38 @@ function updateProfileInfo(num) {
     person[4] = ($("#weight").val());
     person[5] = ($("#height-ft").val());
     person[6] = ($("#height-in").val());
-    person[7] = ($(".allergies").val());
-    person[8] = ($(".health").val());
-    person[9] = ($(".dislikes").val());
-    person[10] = ($(".likes").val());
 
-    console.log(person[1]);
-    console.log(person[10]);
+    var aArray = [];
+    $(".allergies").each(function() {
+      aArray.push($(this).val());
+    });
+    person[7] = aArray;
+
+    var hArray = [];
+    $(".health").each(function() {
+      hArray.push($(this).val());
+    });
+    person[8] = hArray;
+
+    var dArray = [];
+    $(".dislikes").each(function() {
+      dArray.push($(this).val());
+    });
+    person[9] = dArray;
+
+    var lArray =[];
+    $(".likes").each(function() {
+      lArray.push($(this).val());
+    });
+    person[10] = hArray;
+
 
     storedProfiles[num] = person;
     localStorage.setItem("profiles-list", JSON.stringify(storedProfiles));
 
-    window.location='history.back()';
+    updateProfile(num);
+
+    history.back();
 };
 
 function updateProfile(num) {
@@ -135,7 +155,7 @@ function deleteProfile(num) {
        window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
     } else {
        alert("Your profile remains unchanged.");
-       window.location="history.back()";
+       history.back();
     }
   }
 
@@ -146,7 +166,7 @@ function deleteProfile(num) {
        window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
     } else {
        alert("Your profile remains unchanged.");
-       window.location="history.back()";
+       history.back();
     }
   }
 
@@ -157,7 +177,7 @@ function deleteProfile(num) {
        window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
     } else {
        alert("Your profile remains unchanged.");
-       window.location="history.back()";
+       history.back();
     }
   }
 
