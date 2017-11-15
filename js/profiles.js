@@ -135,8 +135,10 @@ function deleteProfile(num) {
        $("#profjanephoto").remove();
        $("#profjanename").remove();
     } else {
-       txt = "Your profile remains unchanged."
+       txt = "Your profile remains unchanged.";
     }
+    alert(txt);
+    window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
   }
   else {
     if (confirm("Are you sure you want to delete this profile?") == true) {
@@ -145,11 +147,10 @@ function deleteProfile(num) {
        $("#profjohnphoto").remove();
        $("#profjohnname").remove();
     } else {
-       txt = "Your profile remains unchanged."
+       txt = "Your profile remains unchanged.";
     }
+    alert(txt);
+    window.location="history.back()";
   }
 
-  alert(txt);
-
-  window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html"
 };
