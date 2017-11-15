@@ -13,8 +13,10 @@
       </div> </br> </br>
       <h1> Create profile </h1></br>
       <form id="profile-form" action="" method="get">
-        <fieldset>
-          <legend>GENERAL</legend>
+
+          <div margin-top=0px class="titlebar">
+            <h2>General</h2>
+          </div>
         <input type="number" id="age" min="1" max="100"> yrs. old</input> </br>
         <select  id="sex" name="Sex">
             <option value=" " disabled selected hidden>Enter Sex</option>
@@ -24,41 +26,38 @@
         <input type="number" id="weight" min="1" max="500"> lbs.</input> </br>
         <input type="number" id="height-ft" min="0" max="8"> ft.
         <input type="number" id="height-in" min="0" max="11"> in. </input></br>
-      </fieldset>
-    </br>
-      <fieldset>
-        <legend>PREFERENCES</legend>
 
-        Allergies:
+        <div class="titlebar" style="background-color:#2f8c66;">
+          <h2>Preferences</h2>
+        </div>
+
+        Allergies to Certain Ingredients:
         <div class="input_fields_wrap1">
-          <button class="add_field_button1">Add Another</button>
-          <div><input type="text" class="allergies" size="30" name="mytext[]"></div>
-        </div> </br>
+          <div><input type="text" class="allergies" size="30" name="mytext[]" placeholder="Peanuts, etc."></div>
+        </div> <button class="add_field_button1">Add Another Allergy</button> </br>
 
         Health Concerns:
         <div class="input_fields_wrap2">
-          <button class="add_field_button2">Add Another</button>
-          <div><input type="text" class="health" size="30" name="mytext[]"></div>
-        </div> </br>
+          <div><input type="text" class="health" size="30" name="mytext[]" placeholder="Diabetes, etc."></div>
+        </div> <button class="add_field_button2">Add Another Concern</button> </br>
 
-        Dislikes:
+        Disliked Ingredients:
         <div class="input_fields_wrap3">
-          <button class="add_field_button3">Add Another</button>
           <div><input type="text" class="dislikes" size="30" name="mytext[]"></div>
-        </div> </br>
+        </div> <button class="add_field_button3">Add Another Dislike</button> </br>
 
-        Likes:
+        Liked Ingredients:
         <div class="input_fields_wrap4">
-          <button class="add_field_button4">Add Another</button>
           <div><input type="text" class="likes" size="30" name="mytext[]"></div>
-        </div> </br>
+        </div> <button class="add_field_button4">Add Another Like</button> </br>
+
 
         <div> Add Profile Photo (optional): </div>
         <input type="file" id="prof-photo"> </br> </br>
 
         <a type="submit" class="btn btn-info" value="Submit Button"
           href="https://cristinaahamad.github.io/teamtofu/main-menu.html">
-          <b>Get Started</b></button></a>
+          <b class="login">Get Started</b></button></a>
       </form>
     </body>
   </html>
