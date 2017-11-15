@@ -175,7 +175,7 @@ function addToProfilePage() {
 
 function deleteProfile(num) {
   if (num == 0){
-    if (confirm("Are you sure you want to delete this profile?") == true) {
+    if (confirm("Are you sure you want to delete Jane's profile?") == true) {
        $("#profjane").remove();
        alert("Deleted!");
        window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
@@ -186,7 +186,7 @@ function deleteProfile(num) {
   }
 
   else if (num == 1){
-    if (confirm("Are you sure you want to delete Jane's profile?") == true) {
+    if (confirm("Are you sure you want to delete John's profile?") == true) {
        $("#profjohn").remove();
        alert("Deleted!");
        window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
@@ -197,7 +197,7 @@ function deleteProfile(num) {
   }
 
   else {
-    if (confirm("Are you sure you want to delete John's profile?") == true) {
+    if (confirm("Are you sure you want to delete this profile?") == true) {
        $(".newprof").remove();
        alert("Deleted!");
        window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
