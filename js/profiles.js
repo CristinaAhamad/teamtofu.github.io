@@ -170,7 +170,7 @@ function addToProfilePage() {
 
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 
-  $("#newprof").append('<img src='+currentPhoto+' style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
+  $("#newprof").append('<img src='+currentPhoto+' style="width:37%;height:37%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
 };
 
 function deleteProfile(num) {
