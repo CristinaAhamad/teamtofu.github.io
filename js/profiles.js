@@ -142,7 +142,7 @@ function addToProfilePage() {
   /*$.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function(data) {
     $(".profilepage").append(data); }
   */
-  document.getElementById(".profilepage").innerHTML=data;
+  document.getElementById(".profilepage").insertAdjacentHTML('beforeend', data);
 
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 };
