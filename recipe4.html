@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Recipe 4</title>
+      <link href="css/main.css" rel="stylesheet">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+<!--Custom CSS-->
+      <link rel="stylesheet" href="css/recipe.css">
+  </head>
+  <body>
+    <div class="navbar">
+      <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+    </div> </br> </br>
+<!--Header-->
+<div>
+  <h1>Maple Salmon</h1>
+</div>
+  <img class="header" src="img/recipe4.jpg">
+<!--Tags-->
+  <div>
+    <meta http-equiv="vegan" content="5;url=https://cristinaahamad.github.io/teamtofu/searchrecipes.html">
+  </div>
+<!--Tabs-->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Description')">Description</button>
+      <button class="tablinks" onclick="openTab(event, 'Ingredients')">Ingredients</button>
+      <button class="tablinks" onclick="openTab(event, 'Recipe')">Recipe</button>
+      <button class="tablinks" onclick="openTab(event, 'Reviews')">Reviews</button>
+    </div>
+<!--Tab Content-->
+
+    <div id="Description" class="tabcontent">
+      <h2>Description</h2>
+      <p>A nutritious salmon recipe infused with Asian influence. It is carb free and high in protein and omega-3.</p>
+    </div>
+    <div id="Ingredients" class="tabcontent">
+      <h2>Ingredients</h2>
+      <ul>
+        <li id="ingredients oil">1/4 cup maple syrup</li>
+        <li id="ingredients onion">2 tablespoons soy sauce</li>
+        <li id="ingredients garlic">1 clove garlic, minced</li>
+        <li id="ingredients quinoa">1/4 teaspoon garlic salt</li>
+        <li id="ingredients vegetable broth">1/8 teaspoon ground black pepper</li>
+        <li id="ingredients cumin">1 pound salmon</li>
+      </ul>
+      <a style="display:block" onclick="getIngredients();addToMyShoppingList();'https://cristinaahamad.github.io/teamtofu/shopping-list.html'">
+        <button id="Save-ingredients" class="Save-Ingredients-Button" type="button"><big>Save Ingredients</big></button>
+      <script src="js/save-ingredients.js"></script>
+    </div>
+    <div id="Recipe" class="tabcontent">
+      <h2>Recipe</h2>
+      <ol>
+        <li>In a small bowl, mix the maple syrup, soy sauce, garlic, garlic salt, and pepper.</li>
+        <li>Place salmon in a shallow glass baking dish, and coat with the maple syrup mixture.
+          Cover the dish, and marinate salmon in the refrigerator 30 minutes, turning once.</li>
+        <li>Preheat oven to 400 degrees F (200 degrees C).</li>
+        <li>Place the baking dish in the preheated oven, and bake salmon uncovered 20 minutes,
+          or until easily flaked with a fork.</li>
+      </ol>
+    </div>
+    <div id="Reviews" class="tabcontent">
+      <h2>Reviews</h2>
+      <p>"This is the best and most delicious salmon recipe, and very easy to prepare.
+         I love maple in everything and put this together one night. My husband totally
+         loved it; he did not like salmon that much until he had this."</p>
+    </div>
+
+    <a href="https://cristinaahamad.github.io/teamtofu/review.html">Add Review</a><br>
+    <a href="https://cristinaahamad.github.io/teamtofu/myrecipes.html">Save Recipe</a>
+
+<!--Custom JavaScript-->
+    <script type="text/javascript" src="js/recipe.js"></script>
+
+  </body>
+</html>
