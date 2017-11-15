@@ -21,21 +21,27 @@ function getFormInfo() {
 
   //Create individual arrays to save Preferences
   var aArray = [];
-  $("#allergies").each(function() {
+  $(".allergies").each(function() {
     aArray.push($(this).val());
   });
   entry.push(aArray);
 
   var hArray = [];
-      hArray.push($("#health").val());
+  $(".health").each(function() {
+    hArray.push($(this).val());
+  });
   entry.push(hArray);
 
   var dArray = [];
-      dArray.push($("#dislikes").val());
+  $(".dislikes").each(function() {
+    dArray.push($(this).val());
+  });
   entry.push(dArray);
 
   var lArray =[];
-      lArray.push($("#likes").val());
+  $(".likes").each(function() {
+    lArray.push($(this).val());
+  });
   entry.push(lArray);
 
   arrayOfProfiles.push(entry);
@@ -105,10 +111,12 @@ function addToProfilePage() {
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  function(e) {
-    $("#profilespg").append('<a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
+  var data = '<a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>';
+
+  $.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html") {
+    $("#profilespg").append(data);
     e.preventDefault();
-  });
+  };
 
   window.location ="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 };
