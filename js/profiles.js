@@ -148,6 +148,8 @@ function updateProfile(num) {
     document.getElementById("john-dislikes").innerHTML = person[9];
     document.getElementById("john-likes").innerHTML = person[10];
   }
+
+  history.back();
 };
 
 function addToProfilePage() {
