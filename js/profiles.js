@@ -116,7 +116,6 @@ function updateProfile(num) {
   var person = storedProfiles[num];
 
   for (i=0; i < 11; i++) {
-      console.log("person"+i+ person[i]);
       if (!person[i]) {
         person[i] = " ";
       }
