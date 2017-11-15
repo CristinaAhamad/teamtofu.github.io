@@ -1,16 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      <link href="css/shoppinglist.css" rel="stylesheet" >
       <title>Shopping List</title>
       <link href="css/main.css" rel="stylesheet">
-      <<meta name=viewport content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />
     </head>
     <body>
       <div class="navbar">
         <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
       </div> </br> </br>
       </br>
-      <h1>Shopping List</h1>
-      <script src="js/save-ingredients.js"></script>
+      <div id="ShoppingList" class="tabcontent">
+        <h1>Shopping List</h1>
+
+      </div>
+
+      <div>
+      <h2>Quinoa and Black Beans</h2>
+      <ul id="myUL">
+        <li>Vegetable oil</li>
+        <li class="checked">Onion</li>
+        <li>Quinoa</li>
+        <li>Vegetable broth</li>
+        <li>Cumin</li>
+        <li>Cayenne pepper</li>
+        <li>Salt and pepper</li>
+        <li>Corn kernels</li>
+        <li>Canned black beans</li>
+        <li>Cilantro</li>
+      </ul>
+      <h2>Roasted Cauliflower</h2>
+      <ul id="myUL">
+        <li>Cauliflower</li>
+        <li class="checked">Avocado oil</li>
+        <li>Cooking spray</li>
+      </ul>
+      <h2>Sugar Free Brownies</h2>
+      <ul id="myUL">
+        <li>Margarine</li>
+        <li>Unsweetend cocoa powder</li>
+        <li>Eggs</li>
+        <li class="checked">Flour</li>
+        <li>Baking powder</li>
+        <li class="checked">Vanilla extract</li>
+        <li>Sugar free chocoalate instant pudding</li>
+      </ul>
+      <h2>Maple Salmon</h2>
+      <ul id="myUL">
+        <li>Maple Syrup</li>
+        <li class="checked">Soy sauce</li>
+        <li>Garlic salt</li>
+        <li>1 pound salmon</li>
+      </div>
+      <h2>Apple Coleslaw</h2>
+      <ul id="myUL">
+        <li>Cabbage</li>
+        <li>Red apple</li>
+        <li>Granny Smith apple</li>
+        <li>Carrot</li>
+        <li>Red bell pepper</li>
+        <li>Green oinions</li>
+        <li>Mayonnaise</li>
+        <li>Brown sugar</li>
+        <li>Lemon juice</li>
+      <script type="text/javascript" src="js/shoppinglist.js"></script>
     </body>
 </html>
