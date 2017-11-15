@@ -116,22 +116,22 @@ function updateProfile(num) {
   var person = storedProfiles[num];
 
   for (i=0; i < 11; i++) {
-      if (!person[i]) {
+      if (person[i] == null) {
         person[i] = " ";
       }
   }
 
-  document.getElementById("firstname").innerHTML = person[0];
-  document.getElementById("lastname").innerHTML = person[1];
-  document.getElementById("age").innerHTML = person[2] + "yrs. old";
-  document.getElementById("sex").innerHTML = person[3];
-  document.getElementById("weight").innerHTML = person[4];
-  document.getElementById("height-ft").innerHTML = person[5] + "ft. ";
-  document.getElementById("height-in").innerHTML = person[6] + "in.";
-  document.getElementById("allergies").innerHTML = person[7];
-  document.getElementById("health").innerHTML = person[8];
-  document.getElementById("dislikes").innerHTML = person[9];
-  document.getElementById("likes").innerHTML = person[10];
+  document.getElementById("jane-first").innerHTML = person[0];
+  document.getElementById("jane-last").innerHTML = person[1];
+  document.getElementById("jane-age").innerHTML = person[2] + "yrs. old";
+  document.getElementById("jane-sex").innerHTML = person[3];
+  document.getElementById("jane-weight").innerHTML = person[4];
+  document.getElementById("jane-height-ft").innerHTML = person[5] + "ft. ";
+  document.getElementById("jane-height-in").innerHTML = person[6] + "in.";
+  document.getElementById("jane-allergies").innerHTML = person[7];
+  document.getElementById("jane-health").innerHTML = person[8];
+  document.getElementById("jane-dislikes").innerHTML = person[9];
+  document.getElementById("jane-likes").innerHTML = person[10];
 };
 
 function addToProfilePage() {
