@@ -143,7 +143,7 @@ function addToProfilePage() {
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  $(".profpg").append('<div class="newprof"><a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a></div>');
+  $("#newprof").append('<img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
 
   /*$.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function(data) {
     $(".profilepage").append(data); }
@@ -157,7 +157,7 @@ function addToProfilePage() {
 function deleteProfile(num) {
   if (num == 0){
     if (confirm("Are you sure you want to delete this profile?") == true) {
-       $(".profjane").remove();
+       $("#profjane").remove();
        alert("Deleted!");
        window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
     } else {
@@ -168,7 +168,7 @@ function deleteProfile(num) {
 
   else if (num == 1){
     if (confirm("Are you sure you want to delete this profile?") == true) {
-       $(".profjohn").remove();
+       $("#profjohn").remove();
        alert("Deleted!");
        window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
     } else {
