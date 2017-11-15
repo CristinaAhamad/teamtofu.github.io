@@ -21,7 +21,9 @@ function getFormInfo() {
 
   //Create individual arrays to save Preferences
   var aArray = [];
-    aArray.push($("#allergies").val());
+  $("#allergies").each(function() {
+    aArray.push($(this).val());
+  }); 
   entry.push(aArray);
 
   var hArray = [];
