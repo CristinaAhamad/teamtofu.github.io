@@ -117,7 +117,7 @@ function updateProfile(num) {
 
   for (i=0; i < 11; i++) {
       console.log("person"+i+ person[i]);
-      if (person[i] == null) {
+      if (!person[i]) {
         person[i] = " ";
       }
   }
