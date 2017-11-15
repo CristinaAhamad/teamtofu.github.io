@@ -159,7 +159,7 @@ function deleteProfile(num) {
     }
   }
 
-  if (num == 2){
+  else if (num == 1){
     if (confirm("Are you sure you want to delete this profile?") == true) {
        $(".profjohn").remove();
        alert("Deleted!");
