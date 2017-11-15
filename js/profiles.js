@@ -121,17 +121,33 @@ function updateProfile(num) {
       }
   }
 
-  document.getElementById("jane-first").innerHTML = person[0];
-  document.getElementById("jane-last").innerHTML = person[1];
-  document.getElementById("jane-age").innerHTML = person[2] + "yrs. old";
-  document.getElementById("jane-sex").innerHTML = person[3];
-  document.getElementById("jane-weight").innerHTML = person[4];
-  document.getElementById("jane-height-ft").innerHTML = person[5] + "ft. ";
-  document.getElementById("jane-height-in").innerHTML = person[6] + "in.";
-  document.getElementById("jane-allergies").innerHTML = person[7];
-  document.getElementById("jane-health").innerHTML = person[8];
-  document.getElementById("jane-dislikes").innerHTML = person[9];
-  document.getElementById("jane-likes").innerHTML = person[10];
+  if (num == 0) {
+    document.getElementById("jane-first").innerHTML = person[0];
+    document.getElementById("jane-last").innerHTML = person[1];
+    document.getElementById("jane-age").innerHTML = person[2] + "yrs. old";
+    document.getElementById("jane-sex").innerHTML = person[3];
+    document.getElementById("jane-weight").innerHTML = person[4];
+    document.getElementById("jane-height-ft").innerHTML = person[5] + "ft. ";
+    document.getElementById("jane-height-in").innerHTML = person[6] + "in.";
+    document.getElementById("jane-allergies").innerHTML = person[7];
+    document.getElementById("jane-health").innerHTML = person[8];
+    document.getElementById("jane-dislikes").innerHTML = person[9];
+    document.getElementById("jane-likes").innerHTML = person[10];
+  }
+
+  else {
+    document.getElementById("john-first").innerHTML = person[0];
+    document.getElementById("john-last").innerHTML = person[1];
+    document.getElementById("john-age").innerHTML = person[2] + "yrs. old";
+    document.getElementById("john-sex").innerHTML = person[3];
+    document.getElementById("john-weight").innerHTML = person[4];
+    document.getElementById("john-height-ft").innerHTML = person[5] + "ft. ";
+    document.getElementById("john-height-in").innerHTML = person[6] + "in.";
+    document.getElementById("john-allergies").innerHTML = person[7];
+    document.getElementById("john-health").innerHTML = person[8];
+    document.getElementById("john-dislikes").innerHTML = person[9];
+    document.getElementById("john-likes").innerHTML = person[10];
+  }
 };
 
 function addToProfilePage() {
