@@ -136,16 +136,16 @@ function deleteProfile(num) {
        txt = "Your profile remains unchanged."
     }
   }
-  if (num == 1){
-    if (confirm("Are you sure you want\nto delete this profile?") == true) {
+  else {
+    if (confirm("Are you sure you want to delete this profile?") == true) {
        txt = "Deleted!";
-       $("#profjane").remove();
+       $("#profjohn").remove();
     } else {
        txt = "Your profile remains unchanged."
     }
   }
 
-  document.getElementById("demo").innerHTML = txt;
+  alert(txt);
 
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html"
 };
