@@ -114,6 +114,12 @@ function updateProfileInfo(num) {
 function updateProfile(num) {
   var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
   var person = storedProfiles[num];
+  
+  for (i=0; i < 11; i++) {
+      if (person[i] == null) {
+        person[i] = " ";
+      }
+  }
 
   document.getElementById("firstname").innerHTML = person[0];
   document.getElementById("lastname").innerHTML = person[1];
