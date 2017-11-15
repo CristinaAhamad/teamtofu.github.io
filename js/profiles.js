@@ -117,7 +117,7 @@ function addToProfilePage() {
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  var data = '<a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>';
+  var data = '<div class="newprof"><a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a></div>';
 
   /*$.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function(data) {
     $(".profilepage").append(data); }
@@ -128,30 +128,37 @@ function addToProfilePage() {
 };
 
 function deleteProfile(num) {
-  var txt;
   if (num == 0){
     if (confirm("Are you sure you want to delete this profile?") == true) {
-       txt = "Deleted!";
-       $("#profjane").remove();
-       $("#profjanephoto").remove();
-       $("#profjanename").remove();
+       $(".profjane").remove();
+       alert("Deleted!");
+       window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
     } else {
-       txt = "Your profile remains unchanged.";
+       alert("Your profile remains unchanged.");
+       window.location="history.back()";
     }
-    alert(txt);
-    window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
   }
+
+  if (num == 2){
+    if (confirm("Are you sure you want to delete this profile?") == true) {
+       $(".profjohn").remove();
+       alert("Deleted!");
+       window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
+    } else {
+       alert("Your profile remains unchanged.");
+       window.location="history.back()";
+    }
+  }
+
   else {
     if (confirm("Are you sure you want to delete this profile?") == true) {
-       txt = "Deleted!";
-       $("#profjohn").remove();
-       $("#profjohnphoto").remove();
-       $("#profjohnname").remove();
+       $(".newprof").remove();
+       alert("Deleted!");
+       window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
     } else {
-       txt = "Your profile remains unchanged.";
+       alert("Your profile remains unchanged.");
+       window.location="history.back()";
     }
-    alert(txt);
-    window.location="history.back()";
   }
 
 };
