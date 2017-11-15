@@ -119,9 +119,11 @@ function addToProfilePage() {
 
   var data = '<a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>';
 
+  $(".profilepage").append(data);
+
   $.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function(data) {
     $(".profilepage").append(data);
-  });
+  })
 
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 };
@@ -129,9 +131,11 @@ function addToProfilePage() {
 function deleteProfile(num) {
   var txt;
   if (num == 0){
-    if (confirm("Are you sure you want\nto delete this profile?") == true) {
+    if (confirm("Are you sure you want to delete this profile?") == true) {
        txt = "Deleted!";
        $("#profjane").remove();
+       $("#profjanephoto").remove();
+       $("#profjanename").remove();
     } else {
        txt = "Your profile remains unchanged."
     }
@@ -140,6 +144,8 @@ function deleteProfile(num) {
     if (confirm("Are you sure you want to delete this profile?") == true) {
        txt = "Deleted!";
        $("#profjohn").remove();
+       $("#profjohnphoto").remove();
+       $("#profjohnname").remove();
     } else {
        txt = "Your profile remains unchanged."
     }
