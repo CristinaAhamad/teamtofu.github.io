@@ -6,9 +6,14 @@
       <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <form>
-      <input type="button" class="back" value=&#x21A9 onclick="history.back()"></input>
-    </form>
-    <input type="button" value="Accept" onclick="history.back()">
+      <div class="navbar">
+        <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+      </div> </br> </br>
+
+
+    <a style="display:block" onclick="history.back()">
+      <input type="button" class="addbutton" value=&#10004>
+      <font size="4">  ACCEPT</font></input>
+    </a>
   </body>
 </html>
