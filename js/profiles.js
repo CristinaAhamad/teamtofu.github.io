@@ -137,12 +137,10 @@ function addToProfilePage() {
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
 
-  var data = '<div class="newprof"><a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a></div>';
-
   /*$.get("https://cristinaahamad.github.io/teamtofu/profiles-page.html", function(data) {
     $(".profilepage").append(data); }
   */
-  document.getElementById("profilespg").insertAdjacentHTML('beforeend', data);
+  document.getElementById("profilespg").insertAdjacentHTML('beforeend', '<div class="newprof"><a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html"> <img src="img/jrdo.png" style="width:40%;height:40%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a></div>');
 
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 };
