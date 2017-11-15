@@ -150,7 +150,6 @@ function updateProfile(num) {
     document.getElementById("john-likes").innerHTML = person[10];
   }
 
-  history.back();
   return false;
 };
 
