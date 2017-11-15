@@ -109,6 +109,7 @@ function updateProfileInfo(num) {
     updateProfile(num);
 
     history.back();
+    return false;
 };
 
 function updateProfile(num) {
@@ -150,6 +151,7 @@ function updateProfile(num) {
   }
 
   history.back();
+  return false;
 };
 
 function addToProfilePage() {
@@ -171,6 +173,7 @@ function addToProfilePage() {
   window.location="https://cristinaahamad.github.io/teamtofu/profiles-page.html";
 
   $("#newprof").append('<img src='+currentPhoto+' style="width:37%;height:37%;border:0;"> <font class="prof-name" size="5">'+ fullName+'</font> </a>');
+  return false;
 };
 
 function deleteProfile(num) {
