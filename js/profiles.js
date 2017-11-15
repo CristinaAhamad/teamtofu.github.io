@@ -127,7 +127,7 @@ function updateProfile(num) {
     document.getElementById("jane-last").innerHTML = person[1];
     document.getElementById("jane-age").innerHTML = person[2] + "yrs. old";
     document.getElementById("jane-sex").innerHTML = person[3];
-    document.getElementById("jane-weight").innerHTML = person[4];
+    document.getElementById("jane-weight").innerHTML = person[4] + "lbs.";
     document.getElementById("jane-height-ft").innerHTML = person[5] + "ft. ";
     document.getElementById("jane-height-in").innerHTML = person[6] + "in.";
     document.getElementById("jane-allergies").innerHTML = person[7];
@@ -141,7 +141,7 @@ function updateProfile(num) {
     document.getElementById("john-last").innerHTML = person[1];
     document.getElementById("john-age").innerHTML = person[2] + "yrs. old";
     document.getElementById("john-sex").innerHTML = person[3];
-    document.getElementById("john-weight").innerHTML = person[4];
+    document.getElementById("john-weight").innerHTML = person[4] + "lbs.";
     document.getElementById("john-height-ft").innerHTML = person[5] + "ft. ";
     document.getElementById("john-height-in").innerHTML = person[6] + "in.";
     document.getElementById("john-allergies").innerHTML = person[7];
