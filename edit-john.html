@@ -10,7 +10,54 @@
       <div class="navbar">
         <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
       </div> </br> </br>
-      <h1> John Doe </h1></br>
-      <a href="http://cristinaahamad.github.io/teamtofu/profiles-page.html">Accept</a> </br>
+      <h1> Edit</h1></br>
+      <form id="profile-form" action="" method="get">
+        <div class="titlebar">
+          <h2>General</h2>
+        </div>
+        <input type="text" size="30" id="firstname" value="John" required></input> </br>
+        <input type="text" size="30" id="lastname" value="Doe" ></input> </br>
+        <input type="number" id="age" value="50" min="1" max="100"> yrs. old</input> </br>
+        <select value="Male" id="sex" name="Sex">
+            <option value=" " disabled selected hidden>Enter Sex</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Decline to State">Decline to State</option>
+        </select> </br>
+        <input type="number" value ="170" id="weight" min="1" max="500"> lbs.</input> </br>
+        <input type="number" value="5" id="height-ft" min="0" max="8"> ft.
+        <input type="number" value="11" id="height-in" min="0" max="11"> in. </input></br>
+        
+    <div class="titlebar" style="background-color:#2f8c66;">
+      <h2>Preferences</h2>
+    </div>
+
+    Allergies to Certain Ingredients:
+    <div class="input_fields_wrap1">
+    </div> <button class="add_field_button1">Add an Allergy</button> </br>
+
+    Health Concerns:
+    <div class="input_fields_wrap2">
+    </div> <button class="add_field_button2">Add a Health Concern</button> </br>
+
+    Disliked Ingredients:
+    <div class="input_fields_wrap3">
+    </div> <button class="add_field_button3">Add a Dislike</button> </br>
+
+    Liked Ingredients:
+    <div class="input_fields_wrap4">
+    </div> <button class="add_field_button4">Add a Like</button> </br>
+
+
+        <div> Add Profile Photo (optional): </div>
+        <input type="file" id="prof-photo"> </br> </br>
+
+        <a style="display:block" onclick="updateProfileInfo(1);'https://cristinaahamad.github.io/teamtofu/profiles-page.html'">
+          <input type="submit" id="submit" class="addbutton" value=&#10004>
+          <font size="4">  ACCEPT</font></input>
+        </a>
+
+      <script src="js/profiles.js"></script>
+      <script src="js/main.js"></script>
     </body>
   </html>
