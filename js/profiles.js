@@ -115,17 +115,17 @@ function updateProfile(num) {
   var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
   var person = storedProfiles[num];
 
-  document.getElementbyID("firstname").innerHTML = person[0];
-  document.getElementbyID("lastname").innerHTML = person[1];
-  document.getElementbyID("age").innerHTML = person[2] + "yrs. old";
-  document.getElementbyID("sex").innerHTML = person[3];
-  document.getElementbyID("weight").innerHTML = person[4];
-  document.getElementbyID("height-ft").innerHTML = person[5] + "ft. ";
-  document.getElementbyID("height-in").innerHTML = person[6] + "in.";
-  document.getElementbyID("allergies").innerHTML = person[7];
-  document.getElementbyID("health").innerHTML = person[8];
-  document.getElementbyID("dislikes").innerHTML = person[9];
-  document.getElementbyID("likes").innerHTML = person[10];
+  document.getElementById("firstname").innerHTML = person[0];
+  document.getElementById("lastname").innerHTML = person[1];
+  document.getElementById("age").innerHTML = person[2] + "yrs. old";
+  document.getElementById("sex").innerHTML = person[3];
+  document.getElementById("weight").innerHTML = person[4];
+  document.getElementById("height-ft").innerHTML = person[5] + "ft. ";
+  document.getElementById("height-in").innerHTML = person[6] + "in.";
+  document.getElementById("allergies").innerHTML = person[7];
+  document.getElementById("health").innerHTML = person[8];
+  document.getElementById("dislikes").innerHTML = person[9];
+  document.getElementById("likes").innerHTML = person[10];
 };
 
 function addToProfilePage() {
