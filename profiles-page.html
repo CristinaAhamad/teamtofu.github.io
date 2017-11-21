@@ -11,13 +11,15 @@
     <body>
       <div class="navbar">
         <input class="back" style="float:left" value=&#x21A9 onclick="history.back()">
+        <a href="main-menu.html">
+          <img class="homebutton" src="img/home.png"  style="float:right" width="40px"></a>
       </div> </br> </br> </br>
 
       <h1> Family Profiles </h1> </br></br>
 
       <div class="profpg" id="profilespg">
 
-        <div id="profjane">
+        <!-- <div id="profjane">
         <a style="display:block" href="https://cristinaahamad.github.io/teamtofu/jane-doe.html">
           <img src="img/janedo.png" style="width:37%;height:37%;border:0;">
           <font class="prof-name" size="5"> Jane Doe </font>
@@ -28,23 +30,36 @@
           <img src="img/johndo.png" style="width:40%;height:40%;border:0;">
           <font class="prof-name" size="5">John Doe</font>
         </a>
-      </div>
+      </div> -->
 
-      <div id="newprof">
+      <!---<div id="newprof">
         <a style="display:block" href="https://cristinaahamad.github.io/teamtofu/profile.html">
           <img src="img/jrdo.png" style="width:37%;height:37%;border:0;">
-      </div>
+      </div> -->
+
+      <script id="display-template" type="text/x-handlebars-template">
+        {{#each elems as |elem index|}}
+          <div>
+            <a onclick="goToProfile({{index}})">
+              <img src="img/johndo.png" style="width:40%;height:40%; border:0;">
+              <font class="prof-name" size="5">{{elem.[0]}} {{elem.[1]}}</font>
+            </a>
+          </div>
+        {{/each}}
+      </script>
 
 
       </div>
     </br>
 
-      <a style="display:block" href="https://cristinaahamad.github.io/teamtofu/new-profile.html">
+      <a style="display:block" href="new-profile.html">
         <input type="button" class="addbutton" value="+">
         <font size="4">  Add new profile </font></input>
       </a>
 
       <script src="js/profiles.js"></script>
       <script src="js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+      <script src="js/create-profiles.js"></script>
     </body>
 </html>
