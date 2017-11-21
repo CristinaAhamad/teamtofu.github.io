@@ -18,7 +18,7 @@
   <img class="header" src="img/recipe4.jpg">
 <!--Tags-->
   <div>
-    <meta http-equiv="vegan" content="5;url=https://cristinaahamad.github.io/teamtofu/searchrecipes.html">
+    <meta http-equiv="vegan" content="5;url=searchrecipes.html">
   </div>
 <!--Tabs-->
     <div class="tab">
@@ -43,8 +43,16 @@
         <li id="ingredients vegetable broth">1/8 teaspoon ground black pepper</li>
         <li id="ingredients cumin">1 pound salmon</li>
       </ul>
-      <a href="https://cristinaahamad.github.io/teamtofu/shopping-list4.html">
-        <button id="Save-ingredients" class="Save-Ingredients-Button" type="button">
+      <script>
+      localStorage.setItem("RecipeName4","Maple Salmon");
+      localStorage.setItem("fourthingredient","Maple Syrup");
+      localStorage.setItem("fourthingre1ient1","Soy Sauce");
+      localStorage.setItem("fourthingredient2","Garlic");
+      localStorage.setItem("fourthingredient3","Garlic Salt");
+      localStorage.setItem("fourthingredient4","Black Pepper");
+      localStorage.setItem("fourthingredient5","1 lb Salmon");
+      </script>
+      <a href="shopping-list.html"><button id="Save-ingredients" class="Save-Ingredients-Button" type="button">
           <big>Save ingredients</big></button></a>
     </div>
     <div id="Recipe" class="tabcontent">
@@ -65,8 +73,8 @@
          loved it; he did not like salmon that much until he had this."</p>
     </div>
 
-    <a href="https://cristinaahamad.github.io/teamtofu/review.html">Add Review</a><br>
-    <a href="https://cristinaahamad.github.io/teamtofu/myrecipes.html">Save Recipe</a>
+    <a href="review.html">Add Review</a><br>
+    <a href="myrecipes.html">Save Recipe</a>
 
 <!--Custom JavaScript-->
     <script type="text/javascript" src="js/recipe.js"></script>

@@ -16,7 +16,7 @@
     <img class="header" src="img/recipe2.jpg">
   <!--Tags-->
     <div>
-      <meta http-equiv="vegan" content="5;url=https://cristinaahamad.github.io/teamtofu/searchrecipes.html">
+      <meta http-equiv="vegan" content="5;url=searchrecipes.html">
     </div>
   <!--Tabs-->
       <div class="tab">
@@ -40,8 +40,13 @@
           <li>31 1/2 tbsp avocado oil/li>
           <li>3/4 tsp salt</li>
         </ul>
-        <a href="https://cristinaahamad.github.io/teamtofu/shopping-list2.html">
-          <button id="Save-ingredients" class="Save-Ingredients-Button" type="button">
+        <script>
+        localStorage.setItem("RecipeName2","Roasted Cauliflower (Rice)");
+        localStorage.setItem("secondingredient","Cauliflower");
+        localStorage.setItem("secondingredient1","Avocado oil");
+        localStorage.setItem("secondingredient2","Salt");
+        </script>
+        <a href="shopping-list.html"><button id="Save-ingredients" class="Save-Ingredients-Button" type="button">
             <big>Save ingredients</big></button></a>
       </div>
       <div id="Recipe" class="tabcontent">
@@ -71,7 +76,7 @@
           sauteed: 1) more flavor and 2) better texture."</p>
       </div>
 
-    <a href="https://cristinaahamad.github.io/teamtofu/review2.html">Add Review</a>
+    <a href="review2.html">Add Review</a>
   <!--Custom JavaScript-->
       <script type="text/javascript" src="js/recipe.js"></script>
 
