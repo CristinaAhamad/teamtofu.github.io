@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link href="css/main.css" rel="stylesheet" >
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="js/profiles.js"></script>
+      <script src="js/main.js"></script>
+      <title>Profiles</title>
+    </head>
+    <body>
+      <div class="navbar">
+        <input class="back" style="float:left" value=&#x21A9 onclick="history.back()">
+        <a href="main-menu-2.html">
+          <img class="homebutton" src="img/home.png"  style="float:right" width="40px"></a>
+      </div> </br> </br> </br>
+
+      <h1> Family Profiles </h1> </br></br>
+
+      <div class="profpg" id="profilespg">
+
+
+      <script id="display-template" type="text/x-handlebars-template">
+        {{#each elems as |elem index|}}
+          <div>
+            <a onclick="goToProfile({{index}})">
+              <img src="img/johndo.png" style="width:40%;height:40%; border:0;">
+              <font class="prof-name" size="5">{{elem.[0]}} {{elem.[1]}}</font>
+            </a>
+          </div>
+        {{/each}}
+      </script>
+
+
+      </div>
+    </br>
+
+      <a style="display:block" href="new-profile.html">
+        <input type="button" class="addbutton" value="+">
+        <font size="4">  Add new profile </font></input>
+      </a>
+
+      <script src="js/profiles.js"></script>
+      <script src="js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+      <script src="js/create-profiles.js"></script>
+    </body>
+</html>
