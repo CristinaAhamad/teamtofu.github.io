@@ -3,13 +3,15 @@
   <head>
       <title>Recipe 1</title>
       <link href="css/main.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />
+      <meta name=viewport content="width=device-width, initial-scale=1">
 <!--Custom CSS-->
       <link rel="stylesheet" href="css/recipe.css">
   </head>
   <body>
     <div class="navbar">
       <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+      <a href="main-menu.html">
+        <img class="homebutton" src="img/home.png"  style="float:right" width="40px"></a>
     </div> </br> </br>
 <!--Header-->
 <div>
@@ -18,7 +20,7 @@
   <img class="header" src="img/recipe1.jpg">
 <!--Tags-->
   <div>
-    <meta http-equiv="vegan" content="5;url=https://cristinaahamad.github.io/teamtofu/searchrecipes.html">
+    <meta http-equiv="vegan" content="5;url=searchrecipes.html">
   </div>
 <!--Tabs-->
     <div class="tab">
@@ -50,11 +52,23 @@
         <li>2 (15oz) cans black beans, rinsed and drained</li>
         <li>1/2 cup chopped fresh cilantro</li>
       </ul>
-      <a href="https://cristinaahamad.github.io/teamtofu/shopping-list1.html">
-        <button id="Save-ingredients" class="Save-Ingredients-Button" type="button">
-          <big>Save ingredients</big></button></a>
-      <script src="js/save-ingredients2.js"></script>
-    </div>
+      <script>
+      localStorage.setItem("RecipeName","Quinoa and Black Beans");
+      localStorage.setItem("ingredients","Vegetable oil");
+      localStorage.setItem("ingredients1","Onion");
+      localStorage.setItem("ingredients2","Garlic");
+      localStorage.setItem("ingredients3","Quinoa");
+      localStorage.setItem("ingredients4","Vegetable Broth");
+      localStorage.setItem("ingredients5","Cumin");
+      localStorage.setItem("ingredients6","Cayenne Pepper");
+      localStorage.setItem("ingredients7","Salt and pepper");
+      localStorage.setItem("ingredients8","Corn Kernels");
+      localStorage.setItem("ingredients9","Black Beans");
+      localStorage.setItem("ingredients10","Cilantro");
+      </script>
+      <button id="Save-ingredients" class="Save-Ingredients-Button" type="button" onclick="iSaved()">
+          <big>Save ingredients</big></button>
+      </div>
     <div id="Recipe" class="tabcontent">
       <h2>Recipe</h2>
       <ol>
@@ -80,7 +94,7 @@
         color and nutrition. It's also excellent just the way it is! Two thumbs up!"</p>
     </div>
 
-    <a href="https://cristinaahamad.github.io/teamtofu/review1.html">Add Review</a>
+    <a href="review1.html">Add Review</a>
 <!--Custom JavaScript-->
     <script type="text/javascript" src="js/recipe.js"></script>
 

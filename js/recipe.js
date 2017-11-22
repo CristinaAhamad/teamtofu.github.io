@@ -18,3 +18,10 @@ function openTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function iSaved(){
+ var button = document.getElementById("Save-ingredients");
+  button.onclick = function(){
+    button.innerHTML="Saved to shopping list!";
+  }
+}
