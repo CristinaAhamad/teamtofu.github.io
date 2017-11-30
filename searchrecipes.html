@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110481636-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-110481636-1');
+      </script>
+
       <link href="css/main.css" rel="stylesheet">
       <meta name=viewport content="width=device-width, initial-scale=1">
 
@@ -15,11 +24,14 @@
     <h1>Search Recipes</h1>
 
     <h2>Who's eating?</h2>
+
+    <script id="display-template" type="text/x-handlebars-template">
+    {{#each elems as |elem index|}}
     <div id="filters">
-      <input type="checkbox" name="John"> John
-      <input type="checkbox" name="Jane"> Jane
-      <input type="checkbox" name="Jr"> Jr
+      <input type="checkbox"> {{elem.[0]}} </input>
     </div>
+    {{/each}}
+  </script>
 
     <div class="container">
      <a href="recipe1.html">
@@ -38,5 +50,6 @@
 
 
       <script type="text/javascript" src="js/search.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
   </body>
 </html>
