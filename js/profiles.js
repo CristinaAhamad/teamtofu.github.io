@@ -174,29 +174,6 @@ function addToProfilePage() {
 };
 
 function deleteProfile(num) {
-  if (num == 0){
-    if (confirm("Are you sure you want to delete Jane's profile?") == true) {
-       $("#profjane").remove();
-       alert("Deleted!");
-       window.location="profiles-page.html";
-    } else {
-       alert("Your profile remains unchanged.");
-       history.back();
-    }
-  }
-
-  else if (num == 1){
-    if (confirm("Are you sure you want to delete John's profile?") == true) {
-       $("#profjohn").remove();
-       alert("Deleted!");
-       window.location="profiles-page.html";
-    } else {
-       alert("Your profile remains unchanged.");
-       history.back();
-    }
-  }
-
-  else {
     if (confirm("Are you sure you want to delete this profile?") == true) {
        $(".newprof").remove();
        alert("Deleted!");
@@ -205,6 +182,5 @@ function deleteProfile(num) {
        alert("Your profile remains unchanged.");
        history.back();
     }
-  }
 
 };
