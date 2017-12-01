@@ -17,6 +17,13 @@
     </head>
 
     <body vertical-align=middle>
+      <script>
+      if ("ga" in window) {
+       tracker = ga.getAll()[0];
+       if (tracker)
+       tracker.send('event', 'button', 'click');
+      }
+      </script>
       <center>
       <div class="menubartop"> </div>
       <div display="table">
