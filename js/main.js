@@ -84,3 +84,13 @@ $(".familybutton").click(function() {
 		tracker = ga.getAll()[0];
 		tracker.send('event', 'family-link','click');
 });
+
+$(".searchbutton2").click(function() {
+		tracker = ga.getAll()[0];
+		tracker.send('event', 'search-link','click');
+});
+
+$(".familybutton2").click(function() {
+		tracker = ga.getAll()[0];
+		tracker.send('event', 'family-link','click');
+});
