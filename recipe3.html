@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="navbar">
-      <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+      <input class="back" style="float:left" value= &#x21A9 onclick="history.back()" onload=updateProfile(0)>
       <a href="main-menu.html">
         <img class="homebutton" src="img/home.png"  style="float:right" width="40px"></a>
     </div> </br> </br>
@@ -35,7 +35,6 @@
         <button class="tablinks" onclick="openTab(event, 'Description')">Description</button>
         <button class="tablinks" onclick="openTab(event, 'Ingredients')">Ingredients</button>
         <button class="tablinks" onclick="openTab(event, 'Recipe')">Recipe</button>
-        <button class="tablinks" onclick="openTab(event, 'Reviews')">Reviews</button>
       </div>
   <!--Tab Content-->
 
@@ -57,19 +56,7 @@
           <li>1 cup sugar free chocolate fudge flavored instant pudding</li>
           <li>walnuts (optional)</li>
         </ul>
-        <script>
-        localStorage.setItem("RecipeName3","Sugar Free Brownies");
-        localStorage.setItem("thirdingredient","Margarine");
-        localStorage.setItem("thirdingredient1","Unsweetened cocoa powder");
-        localStorage.setItem("thirdingredient2","Eggs");
-        localStorage.setItem("thirdingredient3","Flour");
-        localStorage.setItem("thirdingredient4","Baking powder");
-        localStorage.setItem("thirdingredient5","Vanilla extract");
-        localStorage.setItem("thirdingredient6","Chocolate fudge pudding");
-        localStorage.setItem("thirdingredient7","Walnuts");
-        </script>
-        <button id="Save-ingredients" class="Save-Ingredients-Button" type="button" onclick="iSaved()">
-            <big>Save ingredients</big></button>
+
       </div>
       <div id="Recipe" class="tabcontent">
         <h2>Recipe</h2>
@@ -85,15 +72,7 @@
             into the center, comes out clean. </li>
         </ol>
       </div>
-      <div id="Reviews" class="tabcontent">
-        <h2>Reviews</h2>
-        <p>"I have gestational diabetes and all I've wanted lately is a brownie!
-          Made these and the truth is, a regular brownie is ten times better -
-          but for a sugar-free brownie, these are pretty darn good! They are nice
-          and fudgey and took care of my craving."</p>
-      </div>
 
-      <a href="review3.html">Add Review</a>
   <!--Custom JavaScript-->
       <script type="text/javascript" src="js/recipe.js"></script>
   </body>
