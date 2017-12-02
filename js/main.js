@@ -74,3 +74,13 @@ $(document).ready(function() {
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
 });
+
+$(".searchbutton").click(function() {
+		tracker = ga.getAll()[0];
+		tracker.send('event', 'search-link','click');
+});
+
+$(".familybutton").click(function() {
+		tracker = ga.getAll()[0];
+		tracker.send('event', 'family-link','click');
+});
