@@ -74,18 +74,3 @@ $(document).ready(function() {
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
 });
-
-tracker = ga.getAll()[0];
-
-$("#search").click(function() {
-  tracker.send('event', 'search-link', 'click');
-});
-$("#search2").click(function() {
-  tracker.send('event', 'search-link', 'click');
-});
-$("#family").click(function() {
-  tracker.send('event', 'family-link', 'click');
-});
-$("#family2").click(function() {
-  tracker.send('event', 'family-link', 'click');
-});
