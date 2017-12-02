@@ -78,11 +78,13 @@ $(document).ready(function() {
 $(".searchbutton").click(function() {
 		tracker = ga.getAll()[0];
 		tracker.send('event', 'search-link','click');
+    tracker.send('event', 'search-link1','click');
 });
 
 $(".familybutton").click(function() {
 		tracker = ga.getAll()[0];
 		tracker.send('event', 'family-link','click');
+    tracker.send('event', 'family-link1','click');
 });
 
 $(".searchbutton2").click(function() {
