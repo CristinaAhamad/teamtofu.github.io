@@ -74,3 +74,11 @@ $(document).ready(function() {
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
 });
+
+
+if ("ga" in window) {
+ tracker = ga.getAll()[0];
+ if (tracker)
+ tracker.send('event', 'button', 'click');
+ tracker.send('event', 'button', 'click');
+}
