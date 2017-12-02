@@ -87,10 +87,10 @@ $(".familybutton").click(function() {
 
 $(".searchbutton2").click(function() {
 		tracker = ga.getAll()[0];
-		tracker.send('event', 'search-link','click');
+		tracker.send('event', 'search-link2','click');
 });
 
 $(".familybutton2").click(function() {
 		tracker = ga.getAll()[0];
-		tracker.send('event', 'family-link','click');
+		tracker.send('event', 'family-link2','click');
 });
