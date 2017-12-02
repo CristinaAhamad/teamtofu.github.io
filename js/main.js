@@ -75,10 +75,17 @@ $(document).ready(function() {
     })
 });
 
+tracker = ga.getAll()[0];
 
-if ("ga" in window) {
- tracker = ga.getAll()[0];
- if (tracker)
- tracker.send('event', 'button', 'click');
- tracker.send('event', 'button', 'click');
-}
+$("#search").click(function() {
+  tracker.send('event', 'search-link', 'click');
+});
+$("#search2").click(function() {
+  tracker.send('event', 'search-link', 'click');
+});
+$("#family").click(function() {
+  tracker.send('event', 'family-link', 'click');
+});
+$("#family2").click(function() {
+  tracker.send('event', 'family-link', 'click');
+});
