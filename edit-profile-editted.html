@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110481636-1"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-110481636-1');
+        </script>
+
+      <title> Edit Profile </title>
+      <link href="css/main.css" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <meta name=viewport content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <div class="navbar">
+        <input class="back" style="float:left" value= &#x21A9 onclick="history.back()" onload=updateProfile(0)>
+        <!-- <a href="main-menu.html">
+          <img class="homebutton" src="img/home.png"  style="float:right" width="40px"></a> -->
+      </div> </br> </br>
+      <h1> Edit</h1></br>
+      <form id="profile-form" action="" method="get">
+        <div class="titlebar">
+          <h2>General</h2>
+        </div>
+        <input type="text" size="30" class="firstname" required></input> </br>
+        <input type="text" size="30" class="lastname" ></input> </br>
+        <input type="number" class="age" min="1" max="100"> yrs. old</input> </br>
+        <select class="sex" name="Sex">
+            <option value=" " disabled selected hidden>Enter Sex</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Decline to State">Decline to State</option>
+        </select> </br>
+        <input type="number" class="weight" min="1" max="500"> lbs.</input> </br>
+        <input type="number" class="height-ft" min="0" max="8"> ft.
+        <input type="number" class="height-in" min="0" max="11"> in. </input></br>
+    <div class="titlebar" style="background-color:#2f8c66;">
+      <h2>Preferences</h2>
+    </div>
+
+    Allergies to Certain Ingredients:
+    <div class="input_fields_wrap1">
+    </div> <button class="add_field_button1">Add an Allergy</button> </br>
+
+    Health Concerns:
+    <div class="input_fields_wrap2">
+    </div> <button class="add_field_button2">Add a Health Concern</button> </br>
+
+    Disliked Ingredients:
+    <div class="input_fields_wrap3">
+    </div> <button class="add_field_button3">Add a Dislike</button> </br>
+
+    Liked Ingredients:
+    <div class="input_fields_wrap4">
+    </div> <button class="add_field_button4">Add a Like</button> </br>
+
+
+        <div> Add Profile Photo (optional): </div>
+        <input type="file" id="prof-photo"> </br> </br>
+
+        <a style="display:block" onclick="updateProfileInfo(2);">
+          <input type="button" class="addbutton" value=&#10004>
+          <font size="4">  ACCEPT</font></input>
+        </a>
+
+      </br>
+        <a style="float:bottom;" onclick="deleteProfile(2)">
+          <input type="button" class="addbutton" style="background-color:#aa3939;font-size:25px;" value="x">
+          <font size="4">  Delete profile </font></input>
+        </a>
+
+      <script src="js/profiles.js"></script>
+      <script src="js/main.js"></script>
+    </body>
+  </html>

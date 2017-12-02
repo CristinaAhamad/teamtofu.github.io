@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <link href="css/main.css" rel="stylesheet">
+      <meta name=viewport content="width=device-width, initial-scale=1">
+
+      <title>Search Recipes</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <input class="back" style="float:left" value=&#x21A9 onclick="history.back()" onload=updateProfile(0)>
+      <a href="main-menu.html">
+        <img class="homebutton" src="img/home.png"  style="float:right" width="40px"></a>
+    </div> </br> </br>
+    <h1>Search Recipes</h1>
+
+    <h2>Who's eating?</h2>
+    <div id="filters">
+      <input type="checkbox" name="John"> John
+      <input type="checkbox" name="Jane"> Jane
+      <input type="checkbox" name="Jr"> Jr
+    </div>
+
+    <div class="container">
+     <a href="recipe1.html">
+       <div class="filterDiv Jane John">Quinoa and Black Beans</div></a>
+     <a href="recipe2.html">
+       <div class="filterDiv Jane">Roasted Cauliflower (Rice)</div></a>
+     <a href="recipe3.html">
+       <div class="filterDiv Jane Jr">Sugar Free Brownies</div></a>
+     <a href="recipe4.html">
+       <div class="filterDiv John Jane Jr">Maple Salmon</div>
+     <a href="recipe5.html">
+       <div class="filterDiv Jane John Jr">Turkey Veggie Meatloaf Cups</div>
+     <a href="recipe6.html">
+       <div class="filterDiv Jane John">Apple Coleslaw</div>
+     </div>
+
+
+      <script type="text/javascript" src="js/search.js"></script>
+  </body>
+</html>
