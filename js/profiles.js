@@ -3,8 +3,8 @@ function getFormInfo() {
   if (localStorage.length == 0) {
     var arrayOfProfiles = [];
     arrayOfProfiles = [
-      ['Jane','Doe','47','Female','130','5','4','[]','[]','[]', '["Black Beans", "Cauliflower"]' ],
-      ['John','Doe','50','Male','170','5','11','[]','["Vegetarian"]','["Cauliflower"]', '["Quinoa"]' ]
+      ['Jane','Doe','47','Female','130','5','4','','','', 'Black Beans, </br> Cauliflower' ],
+      ['John','Doe','50','Male','170','5','11','','Vegetarian','Cauliflower', 'Quinoa' ]
     ]
   } else {
     var arrayOfProfiles = JSON.parse(localStorage.getItem("profiles-list"));
@@ -54,7 +54,8 @@ function getFormInfo() {
 function showInfo() {
 
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
-    var person = storedProfiles[storedProfiles.length-1];
+    var elem = JSON.parse(localStorage.getItem("currentProfile"));
+    var person = storedProfiles[elem];
 
     $(".newprof").append('<h1 display="inline" clear="none" id="firstname">'+person[0]+'<h1 display="inline" clear="none" id="lastname">'+" "+person[1]+ '</h1>');
     $(".newprof").append('<div class="titlebar"> <h2>General</h2> </div><text size="30" id="age"/>'+person[2]+' yrs. old </text></br>');
@@ -81,24 +82,28 @@ function updateProfileInfo(num) {
     var aArray = [];
     $(".allergies").each(function() {
       aArray.push($(this).val());
+      aArray.push('</br>');
     });
     person[7] = aArray;
 
     var hArray = [];
     $(".health").each(function() {
       hArray.push($(this).val());
+      hArray.push('</br>');
     });
     person[8] = hArray;
 
     var dArray = [];
     $(".dislikes").each(function() {
       dArray.push($(this).val());
+      dArray.push('</br>');
     });
     person[9] = dArray;
 
     var lArray =[];
     $(".likes").each(function() {
       lArray.push($(this).val());
+      lArray.push('</br>');
     });
     person[10] = hArray;
 
