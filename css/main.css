@@ -200,8 +200,3 @@ button[class=add_field_button1],[class=add_field_button2],[class=add_field_butto
 big {
   background-color: inherit;
 }
-
-.homebutton{
-  position: relative;
-  top: 12px;
-}
