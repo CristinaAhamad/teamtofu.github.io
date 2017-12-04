@@ -1,3 +1,22 @@
 h1 {
   font-size: 25px;
 }
+
+html *
+{
+   font-family: Raleway !important;
+   text-align: center;
+   vertical-align: middle;
+   background-color: transparent;
+}
+
+h2 {
+  margin-bottom: 50px;
+  padding: 0px;
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: inherit;
+  clear: none;
+  text-align: center;
+}
