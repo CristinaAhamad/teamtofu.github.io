@@ -23,24 +23,28 @@ function getFormInfo() {
   var aArray = [];
   $(".allergies").each(function() {
     aArray.push($(this).val());
+    aArray.push('</br>');
   });
   entry.push(aArray);
 
   var hArray = [];
   $(".health").each(function() {
     hArray.push($(this).val());
+    hArray.push('</br>');
   });
   entry.push(hArray);
 
   var dArray = [];
   $(".dislikes").each(function() {
     dArray.push($(this).val());
+    dArray.push('</br>');
   });
   entry.push(dArray);
 
   var lArray =[];
   $(".likes").each(function() {
     lArray.push($(this).val());
+    lArray.push('</br>');
   });
   entry.push(lArray);
 
@@ -66,96 +70,108 @@ function showInfo() {
     $(".newprof").append('<div> <h3> Likes: </h3><text size="30"/> '+person[10]+' </text></div>');
 };
 
-function updateProfileInfo(num) {
 
+function updateProfileInfo() {
     var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
-    var person = storedProfiles[num];
+    var elem = JSON.parse(localStorage.getItem("currentProfile"));
+    var person = storedProfiles[elem];
 
-    person[0] = $(".firstname").val() + " ";
-    person[1] = $(".lastname").val();
-    person[2] = $(".age").val();
-    person[3] = ($(".sex").val());
-    person[4] = ($(".weight").val());
-    person[5] = ($(".height-ft").val());
-    person[6] = ($(".height-in").val());
+    if ($(".firstname").val() == ''){
+      //no change
+      person[0] = person [0];
+    } else {
+      person[0] = $(".firstname").val() + " ";
+    }
+    if ($(".lastname").val() == ''){
+      //no change
+      person[1] = person [1];
+    } else {
+      person[1] = $(".lastname").val();
+    }
+    if ($(".age").val() == ''){
+      //no change
+      person[2] = person [2];
+    } else {
+      person[2] = $(".age").val();
+    }
+    if ($(".sex").val() == null){
+      //no change
+      person[3] = person [3];
+    } else {
+      person[3] = ($(".sex").val());
+    }
+    if ($(".weight").val() == ''){
+      //no change
+      person[4] = person [4];
+    } else {
+      person[4] = ($(".weight").val());
+    }
+    if ($(".height-ft").val() == ''){
+      //no change
+      person[5] = person [5];
+    } else {
+      person[5] = ($(".height-ft").val());
+    }
+    if ($(".height-in").val() == ''){
+      //no change
+      person[6] = person [6];
+    } else {
+      person[6] = ($(".height-in").val());
+    }
 
-    var aArray = [];
-    $(".allergies").each(function() {
-      aArray.push($(this).val());
-      aArray.push('</br>');
-    });
-    person[7] = aArray;
 
-    var hArray = [];
-    $(".health").each(function() {
-      hArray.push($(this).val());
-      hArray.push('</br>');
-    });
-    person[8] = hArray;
+    if ($(".allergies").val() == null){
+      //no change
+      person[7] = person [7];
+    } else {
+      var aArray = [];
+      $(".allergies").each(function() {
+        aArray.push($(this).val());
+        aArray.push('</br>');
+      });
+      person[7] = aArray;
+    }
 
-    var dArray = [];
-    $(".dislikes").each(function() {
-      dArray.push($(this).val());
-      dArray.push('</br>');
-    });
-    person[9] = dArray;
+    if ($(".health").val() == null){
+      //no change
+      person[8] = person [8];
+    } else {
+      var hArray = [];
+      $(".health").each(function() {
+        hArray.push($(this).val());
+        hArray.push('</br>');
+      });
+      person[8] = hArray;
+    }
 
-    var lArray =[];
-    $(".likes").each(function() {
-      lArray.push($(this).val());
-      lArray.push('</br>');
-    });
-    person[10] = hArray;
+    if ($(".dislikes").val() == null){
+      //no change
+      person[9] = person [9];
+    } else {
+      var dArray = [];
+      $(".dislikes").each(function() {
+        dArray.push($(this).val());
+        dArray.push('</br>');
+      });
+      person[9] = dArray;
+    }
 
+    if ($(".likes").val() == null){
+      //no change
+      person[10] = person [10];
+    } else {
+      var lArray =[];
+      $(".likes").each(function() {
+        lArray.push($(this).val());
+        lArray.push('</br>');
+      });
+      person[10] = hArray;
+    }
 
-    storedProfiles[num] = person;
+    storedProfiles[elem] = person;
     localStorage.setItem("profiles-list", JSON.stringify(storedProfiles));
 
-    updateProfile(num);
-
     history.back();
-    return false;
-};
-
-function updateProfile(num) {
-  var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
-  var person = storedProfiles[num];
-
-  for (i=0; i < 11; i++) {
-      if (!person[i]) {
-        person[i] = " ";
-      }
-  }
-
-  if (num == 0) {
-    document.getElementById("jane-first").innerHTML = person[0];
-    document.getElementById("jane-last").innerHTML = person[1];
-    document.getElementById("jane-age").innerHTML = person[2] + "yrs. old";
-    document.getElementById("jane-sex").innerHTML = person[3];
-    document.getElementById("jane-weight").innerHTML = person[4] + "lbs.";
-    document.getElementById("jane-height-ft").innerHTML = person[5] + "ft. ";
-    document.getElementById("jane-height-in").innerHTML = person[6] + "in.";
-    document.getElementById("jane-allergies").innerHTML = person[7];
-    document.getElementById("jane-health").innerHTML = person[8];
-    document.getElementById("jane-dislikes").innerHTML = person[9];
-    document.getElementById("jane-likes").innerHTML = person[10];
-  }
-
-  else {
-    document.getElementById("john-first").innerHTML = person[0];
-    document.getElementById("john-last").innerHTML = person[1];
-    document.getElementById("john-age").innerHTML = person[2] + "yrs. old";
-    document.getElementById("john-sex").innerHTML = person[3];
-    document.getElementById("john-weight").innerHTML = person[4] + "lbs.";
-    document.getElementById("john-height-ft").innerHTML = person[5] + "ft. ";
-    document.getElementById("john-height-in").innerHTML = person[6] + "in.";
-    document.getElementById("john-allergies").innerHTML = person[7];
-    document.getElementById("john-health").innerHTML = person[8];
-    document.getElementById("john-dislikes").innerHTML = person[9];
-    document.getElementById("john-likes").innerHTML = person[10];
-  }
-
-  return false;
 };
 
 function addToProfilePage() {
@@ -179,13 +195,34 @@ function addToProfilePage() {
 };
 
 function deleteProfile(num) {
+  var storedProfiles = JSON.parse(localStorage.getItem("profiles-list"));
+  var elem = JSON.parse(localStorage.getItem("currentProfile"));
+  console.log(elem);
+  console.log(storedProfiles.length);
+  var person = storedProfiles[elem];
+
     if (confirm("Are you sure you want to delete this profile?") == true) {
-       $(".newprof").remove();
-       alert("Deleted!");
-       window.location="profiles-page.html";
-    } else {
-       alert("Your profile remains unchanged.");
-       history.back();
+      if (elem == storedProfiles.length+1) {
+        storedProfiles.pop();
+        localStorage.setItem("profiles-list", JSON.stringify(storedProfiles));
+        alert("Deleted!");
+        window.location="profiles-page.html";
+      } else {
+        var j = elem + 1;
+        for (var i = elem; i < storedProfiles.length; i++){
+          storedProfiles[i] = storedProfiles [j];
+          j++;
+        }
+        storedProfiles[storedProfiles.length-1] = person;
+        storedProfiles.pop();
+        localStorage.setItem("profiles-list", JSON.stringify(storedProfiles));
+        alert("Deleted!");
+        window.location="profiles-page.html";
+      }
+    }
+    else {
+      alert("Your profile remains unchanged.");
+      history.back();
     }
 
 };
