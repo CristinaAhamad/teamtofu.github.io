@@ -182,11 +182,6 @@ function addToProfilePage() {
   var currentFirst = person[0];
   var currentLast = person[1];
   var fullName = currentFirst+" "+currentLast;
-  var currentPhoto="img/jrdo.png";
-
-  /*
-  <img src='+currentPhoto+' style="width:37%;height:37%;border:0;">
-  */
 
   window.location="profiles-page.html";
 
