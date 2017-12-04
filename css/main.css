@@ -100,7 +100,7 @@ a {
   margin-left: 0;
   text-align: center;
   vertical-align: middle;
-  font-size: 20px;
+  font-size: 15px;
   height: 30px;
   width: 100%;
 }
@@ -203,6 +203,10 @@ big {
 
 .homebutton {
   position: relative;
+<<<<<<< HEAD
   top: 12px;
+=======
+  top: 8px;
+>>>>>>> c18b17786c922125e78cb866146ce085b5594403
   right: 10px;
 }
